@@ -157,6 +157,21 @@ $(document).ready(function () {
 
     });
 
+    // Qr section start
+    var qr = QRCode.generatePNG(document.getElementById("qrUrl").value, {
+        ecclevel: "M",
+        format: "html",
+        margin: 4,
+        modulesize: 8,
+    });
+
+    var img = document.createElement("img");
+    img.src = qr;
+    document.getElementById("qrcode").appendChild(img);
+    var download = (document.getElementById("download-qr").href = qr);
+    // Qr section end
+
+
 
     // select2 filter sidebar
     $(".js-example-basic-single").select2({
