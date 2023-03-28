@@ -173,6 +173,10 @@ $(document).ready(function () {
 
 
 
+
+
+
+
     // select2 filter sidebar
     $(".js-example-basic-single").select2({
         maximumSelectionLength: 2
@@ -199,6 +203,7 @@ $(document).ready(function () {
 });
 
 
+
 // input file preview
 const previewImage = (id) => {
     document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
@@ -207,6 +212,4 @@ const previewImage = (id) => {
 // Tooltip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
-
 

@@ -21,9 +21,8 @@
     --bg-color3: #0a1c3a;
     --body-color: #707070;
     --border-color1: #f2f2f2;
-    --border-color2: #e1e1e1;
+    --border-color2: #DCD8E8;
     --border-color3: #e1f1ee;
-    --border-color4: #ccc;
     --primary-color-opacity-low: rgba(71, 190, 185, .1);
     --primary-color-opacity-low2: rgba(71, 190, 185, .2);
     --primary-color-opacity-low3: rgba(5, 160, 129, .3);
@@ -261,6 +260,31 @@ textarea.form-control {
 
 // Select2 end
 
+// Breadcrumb start
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+
+    .breadcrumb-item {
+        + {
+            .breadcrumb-item {
+                &::before {
+                    content: "\f105";
+                    color: var(--black);
+                    font-family: 'Font Awesome 6 Pro';
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .breadcrumb-item.active {
+        color: var(--primary-color);
+        text-transform: capitalize;
+    }
+}
+// Breadcrumb end
+
 p {
     color: var(--black);
     margin-bottom: 10px;
@@ -348,13 +372,13 @@ figure {
 }
 
 .logo {
-    max-width: 60px;
-    min-width: 60px;
+    max-width: 50px;
+    min-width: 50px;
 }
 
 .footer-logo {
-    max-width: 60px;
-    min-width: 60px;
+    max-width: 50px;
+    min-width: 50px;
 }
 
 .cmn-scroll {
@@ -1021,7 +1045,7 @@ hr.divider:after {
 // Nav area start
 .navbar.active {
     background-color: var(--white);
-    box-shadow: rgb(0 0 0 / 20%) 0px -2px 6px;
+    box-shadow: var(--shadow3);
     z-index: 9999;
 }
 
@@ -1763,29 +1787,6 @@ hr.divider:after {
     text-align: center;
 
     h3 {
-        text-transform: capitalize;
-    }
-}
-
-.breadcrumb {
-    display: flex;
-    justify-content: center;
-
-    .breadcrumb-item {
-        + {
-            .breadcrumb-item {
-                &::before {
-                    content: "\f105";
-                    color: var(--black);
-                    font-family: 'Font Awesome 6 Pro';
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-
-    .breadcrumb-item.active {
-        color: var(--primary-color);
         text-transform: capitalize;
     }
 }
