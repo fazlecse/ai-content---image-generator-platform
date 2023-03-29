@@ -283,6 +283,7 @@ textarea.form-control {
         text-transform: capitalize;
     }
 }
+
 // Breadcrumb end
 
 p {
@@ -608,11 +609,6 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.cmn_box2 i {
-    margin-right: 15px;
-    font-size: 40px;
-    color: var(--primary-color);
-}
 
 .video_play_btn {
     position: absolute;
@@ -1195,23 +1191,27 @@ hr.divider:after {
 // ----------------------------------------------------
 // Qr section start
 // ----------------------------------------------------
-.qr-section{
+.qr-section {
     background: var(--bg-color2);
-    .qr-box{
+
+    .qr-box {
         background: var(--white);
         box-shadow: var(--shadow2);
         width: 200px;
         border-radius: 8px;
-        img{
+
+        img {
             border-radius: 8px;
         }
     }
-    .qr-section-imgae-area{
-        img{
+
+    .qr-section-imgae-area {
+        img {
             max-width: 500px;
         }
     }
 }
+
 // ----------------------------------------------------
 // Qr section end
 // ----------------------------------------------------
