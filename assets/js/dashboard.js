@@ -334,4 +334,10 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 
+// select2 user panel blog section
+$(document).ready(function() {
+    $('.js-example-basic-single').select2({
+        maximumSelectionLength: 2
+    });
 
+});

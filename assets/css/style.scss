@@ -608,7 +608,40 @@ body::-webkit-scrollbar-thumb {
         color: var(--white);
     }
 }
+// --------------------------------------------------------
+// -- Cmn tab section start --
+// --------------------------------------------------------
+.cmn-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
+.cmn-tabs .nav-pills {
+    background-color: var(--primary-color-opacity-low);
+    padding: 5px 7px;
+    border-radius: 24px;
+}
+
+.cmn-tabs .nav-pills .nav-link {
+    padding: 3px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 24px;
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}
+
+.cmn-tabs .nav-pills .nav-link.active,
+.cmn-tabs .nav-pills .show>.nav-link {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+// --------------------------------------------------------
+// -- Cmn tab section end --
+// --------------------------------------------------------
 
 .video_play_btn {
     position: absolute;
@@ -1259,12 +1292,14 @@ hr.divider:after {
     }
 }
 
-// *---------------------------------------------------- */
+// ----------------------------------------------------
 // How it works section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
+// ----------------------------------------------------
 // Pricing section start
+// ----------------------------------------------------
 .pricing-section {
     background: var(--bg-color2);
 }
@@ -1335,12 +1370,14 @@ hr.divider:after {
     }
 }
 
+// ----------------------------------------------------
 // Pricing section end
+// ----------------------------------------------------
 
 
-// *---------------------------------------------------- */
+//----------------------------------------------------
 // Testimonial section start
-/*----------------------------------------------------*/
+//----------------------------------------------------
 
 .testimonial-section {
     background: var(--bg-color1);
