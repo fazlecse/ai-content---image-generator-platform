@@ -380,7 +380,6 @@ h5 {
 
 h6 {
     font-size: 16px;
-    line-height: 25px;
     font-weight: 700;
     margin-bottom: 0;
     color: var(--heading-color);
@@ -667,9 +666,7 @@ body::-webkit-scrollbar-thumb {
     height: 600px;
     margin-top: 10px;
 }
-.rte-powerby{
-    display: none !important;
-}
+
 
 // --------------------------------------------------------
 // rich-text-editor section end 
@@ -850,6 +847,47 @@ hr.divider:after {
     background: var(--primary-color);
     color: var(--white) !important;
 }
+
+
+// --------------------------------------------------------
+// -- Responsive table section start
+// --------------------------------------------------------
+@media (max-width: 767px) {
+    .table-responsive .table thead {
+        display: none;
+    }
+
+    .table-responsive .table tbody tr {
+        display: block;
+    }
+
+    .table-responsive .table tbody tr td {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: none !important;
+        margin: 0 !important;
+        padding: 10px 15px;
+    }
+
+    .table-responsive .table tbody tr td::before {
+        content: attr(data-label);
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: var(--black);
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-right: 20px;
+    }
+
+    .table-responsive .table tbody>tr:nth-of-type(even)>* {
+        --bs-table-accent-bg: var(--bgDark) !important;
+    }
+}
+
+// --------------------------------------------------------
+// -- Responsive table section end --
+// --------------------------------------------------------
 
 /* reusable_style_end */
 
@@ -1160,9 +1198,13 @@ hr.divider:after {
 }
 
 .card-header {
-    padding: 20px 20px 0 20px;
+    padding: 20px;
     background: var(--white);
-    border: none;
+    border-bottom: 1px solid var(--border-color1);
+
+    .card-title {
+        margin-bottom: 0;
+    }
 
 }
 
@@ -1243,12 +1285,12 @@ hr.divider:after {
 --------------------------------------------------------------*/
 #main {
     margin-top: 60px;
-    padding: 20px 30px;
+    padding: 30px;
     transition: all 0.3s;
     background: var(--bg-color2);
 
     .pagetitle {
-        margin: 10px 0 30px 0;
+        margin-bottom: 30px;
     }
 
     .breadcrumb {
@@ -1353,7 +1395,7 @@ hr.divider:after {
 }
 
 .header .search-form button i {
-    color: #012970;
+    color: var(--heading-color);
 }
 
 /*--------------------------------------------------------------
@@ -1403,7 +1445,7 @@ hr.divider:after {
 .header-nav .notifications .notification-item a {
     display: flex;
     align-items: center;
-    padding: 15px 10px;
+    padding: 10px;
     transition: 0.3s;
 }
 
@@ -1433,7 +1475,7 @@ hr.divider:after {
 }
 
 .header-nav .messages .message-item {
-    padding: 15px 10px;
+    padding: 10px;
     transition: 0.3s;
 }
 
@@ -1861,7 +1903,7 @@ hr.divider:after {
 .card-title i {
     color: var(--soft-red);
     font-size: 18px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .dashboard .favorite-template .table thead {
@@ -2037,42 +2079,136 @@ hr.divider:after {
 }
 
 .section-right-card {
-    .card{
+    .card {
         min-height: 700px;
     }
-    .cmn-btn-group {
-        .single-btn {
-            margin-right: 5px;
-            margin-bottom: 5px;
+}
+.cmn-btn-group {
+    .single-btn {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .single-btn .active{
+        background: var(--primary-color);
+        color: var(--white);
+    }
 
-            &:last-child i {
-                background: var(--primary-color);
-                color: var(--white);
-            }
-        }
+    i {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background: var(--primary-color-opacity-low);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        font-size: 18px;
 
-        i {
-            width: 40px;
-            height: 40px;
-            border-radius: 5px;
-            background: var(--primary-color-opacity-low);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-
-            &:hover {
-                color: var(--primary-color);
-                background: var(--primary-color-opacity-low2);
-            }
+        &:hover {
+            color: var(--primary-color);
+            background: var(--primary-color-opacity-low2);
         }
     }
 }
 
-
 // ----------------------------------------------------
 // User-panel-templates-blog-section end
 // ----------------------------------------------------
+
+
+
+// ----------------------------------------------------
+// All images section start
+// ----------------------------------------------------
+.cmn-table-card {
+    .search-bar {
+        display: flex;
+        justify-content: end;
+        margin-right: 20px;
+
+        .form-control {
+            border: none;
+            box-shadow: none;
+            border-bottom: 1px solid var(--border-color1);
+            border-radius: 0;
+            background: var(--white);
+            width: 200px;
+            padding: 5px 35px 5px 5px;
+
+            &:hover {
+                border-color: var(--primary-color);
+            }
+
+            &:focus {
+                border-color: var(--primary-color);
+            }
+        }
+
+        button {
+            margin-left: -30px;
+        }
+    }
+}
+
+.data-table-length {
+    .form-select {
+        width: initial;
+        border: none;
+        border-bottom: 1px solid var(--border-color1);
+        border-radius: 0;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+        box-shadow: none;
+
+        &:hover {
+            border-color: var(--primary-color);
+        }
+    }
+}
+
+.cmn-table {
+    .text-bold {
+        font-weight: 700;
+        color: var(--heading-color);
+    }
+
+    table {
+        font-size: 14px;
+        color: var(--grayish-blue);
+
+        thead {
+            tr {
+                th {
+                    font-weight: 700;
+                    color: var(--heading-color);
+                }
+            }
+        }
+    }
+    tbody{
+        td{
+            padding: 20px 10px;
+        }
+    }
+
+    .table-img {
+        min-width: 44px;
+        width: 44px;
+        height: 44px;
+        margin-right: 10px;
+
+        img {
+            border-radius: 8px;
+        }
+    }
+}
+
+// ----------------------------------------------------
+// All images section end
+// ----------------------------------------------------
+
+
 // ----------------------------------------------------
 // Pricing section start
 // ----------------------------------------------------
@@ -2094,6 +2230,7 @@ hr.divider:after {
         width: 90%;
         padding-top: 32px;
         text-align: center;
+        margin-bottom: 0;
 
         .section-title {
             text-transform: capitalize;
@@ -2140,7 +2277,18 @@ hr.divider:after {
 
 .pricing-box.featured {
     border: 1px solid var(--primary-color);
-
+    position: relative;
+    .featured-title{
+        position: absolute;
+        background: var(--primary-color);
+        top: -17px;
+        padding: 4px 15px;
+        border-radius: 18px;
+        color: var(--white);
+        text-transform: capitalize;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .section-header {
         border-color: var(--primary-color);
     }

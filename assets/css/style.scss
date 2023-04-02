@@ -1318,6 +1318,7 @@ hr.divider:after {
         width: 90%;
         padding-top: 32px;
         text-align: center;
+        margin-bottom: 0;
 
         .section-title {
             text-transform: capitalize;
@@ -1364,7 +1365,18 @@ hr.divider:after {
 
 .pricing-box.featured {
     border: 1px solid var(--primary-color);
-
+    position: relative;
+    .featured-title{
+        position: absolute;
+        background: var(--primary-color);
+        top: -17px;
+        padding: 4px 15px;
+        border-radius: 18px;
+        color: var(--white);
+        text-transform: capitalize;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .section-header {
         border-color: var(--primary-color);
     }

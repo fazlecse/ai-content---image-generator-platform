@@ -366,8 +366,8 @@
                                             <div class="templete-title-area">
                                                 <div class="template-icon-area">
                                                     <div class="item item1">
-                                                        <i class="fa-regular fa-message-captions"></i> <span
-                                                            class="template-title">Blog Section</span>
+                                                        <i class="fa-regular fa-image"></i> <span
+                                                            class="template-title">AI Image Generator</span>
                                                     </div>
                                                     <div class="item item2">
                                                         <a href=""><i class="star fa-regular fa-star"></i></a>
@@ -425,7 +425,7 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="btn-area">
-                                                    <button type="submit" class="cmn-btn">generate text</button>
+                                                    <button type="submit" class="cmn-btn">generate image</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -436,64 +436,273 @@
                         </div>
                         <div class="col-md-8">
                             <div class="section-right-card">
-                                <div class="card">
+                                <div class="card cmn-table-card overflow-auto">
+                                    <div class="filter">
+                                        <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                                class="fa-regular fa-ellipsis"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                            <li class="dropdown-header text-start">
+                                                <h6>Filter</h6>
+                                            </li>
+
+                                            <li><a class="dropdown-item" href="#">Today</a></li>
+                                            <li><a class="dropdown-item" href="#">This Month</a></li>
+                                            <li><a class="dropdown-item" href="#">This Year</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-header">
+                                        <h5 class="card-title"><i class="fa-regular fa-image"></i>Generated Images</h5>
+                                    </div>
                                     <div class="card-body">
-                                        <div class="card-body-top">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control" id="inputCity"
-                                                        value="New Document">
-                                                </div>
-                                                <div class="col-4">
-                                                    <select class="cmn-select2-dropdown" name="state">
-                                                        <option value="AL">Select Workbook Name</option>
-                                                        <option value="WY"> DADA</option>
-                                                        <option value="WY">TRST</option>
-                                                        <option value="WY">Aaaa</option>
-                                                        <option value="WY">Forla</option>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="data-table-length">
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>25</option>
+                                                        <option value="1">50</option>
+                                                        <option value="2">100</option>
+                                                        <option value="3">All</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-4">
-                                                    <div class="cmn-btn-group">
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-title="Export as Word Document"
-                                                            class="single-btn"><i
-                                                                class="fa-sharp fa-regular fa-file-word"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-title="Export as PDF Document" class="single-btn"><i
-                                                                class="fa-regular fa-file-pdf"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-title="Export as Text Document"
-                                                            class="single-btn"><i
-                                                                class="fa-sharp fa-regular fa-file-invoice"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" data-bs-title="Copy Text"
-                                                            class="single-btn"><i
-                                                                class="fa-regular fa-copy"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" data-bs-title="Save Document"
-                                                            class="single-btn"><i
-                                                                class="fa-regular fa-print active"></i></button>
-                                                    </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="search-bar">
+                                                    <form class="search-form d-flex align-items-center" method="POST"
+                                                        action="#">
+                                                        <input type="text" class="form-control" name="query"
+                                                            placeholder="Search" title="Enter search keyword">
+                                                        <button type="submit" title="Search"><i
+                                                                class="fa-regular fa-magnifying-glass"></i></button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="rich-text-editor">
-                                                <div id="div_editor1">
-                                                    <p>Hello world!</p>
-                                                    <!-- <p><img src='/images/editor-image.png' /></p> -->
-                                                </div>
+
+
+                                        <!-- Cmn table start -->
+                                        <div class="cmn-table">
+                                            <div class="table-responsive">
+                                                <table class="table align-middle">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 15%;" scope="col">Image</th>
+                                                            <th style="width: 5%;" scope="col">Resolution</th>
+                                                            <th style="width: 5%;" scope="col">Created On</th>
+                                                            <th style="width: 3%;" scope="col">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td data-label="Image" scope="row">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="table-img">
+                                                                        <img src="assets/images/user_panel/table/1.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h6>test</h6>
+                                                                        <span>80s glow worm</span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td data-label="Resolution"><span>256x256</span></td>
+                                                            <td data-label="Created On">
+                                                                <div>
+                                                                    <span class="text-bold"> 02 Apr 2023</span>
+                                                                    <br>
+                                                                    <span>07:05 AM</span>
+                                                                </div>
+                                                            </td>
+
+                                                            <td data-label="Actions">
+                                                                <div class="cmn-btn-group">
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Download Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-cloud-arrow-down"></i></button>
+
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Delete Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-trash-can"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Image" scope="row">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="table-img">
+                                                                        <img src="assets/images/user_panel/table/2.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h6>test</h6>
+                                                                        <span>80s glow worm</span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td data-label="Resolution"><span>256x256</span></td>
+                                                            <td data-label="Created On">
+                                                                <div>
+                                                                    <span class="text-bold"> 02 Apr 2023</span>
+                                                                    <br>
+                                                                    <span>07:05 AM</span>
+                                                                </div>
+                                                            </td>
+
+                                                            <td data-label="Actions">
+                                                                <div class="cmn-btn-group">
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Download Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-cloud-arrow-down"></i></button>
+
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Delete Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-trash-can"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Image" scope="row">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="table-img">
+                                                                        <img src="assets/images/user_panel/table/3.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h6>test</h6>
+                                                                        <span>80s glow worm</span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td data-label="Resolution"><span>256x256</span></td>
+                                                            <td data-label="Created On">
+                                                                <div>
+                                                                    <span class="text-bold"> 02 Apr 2023</span>
+                                                                    <br>
+                                                                    <span>07:05 AM</span>
+                                                                </div>
+                                                            </td>
+
+                                                            <td data-label="Actions">
+                                                                <div class="cmn-btn-group">
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Download Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-cloud-arrow-down"></i></button>
+
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Delete Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-trash-can"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Image" scope="row">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="table-img">
+                                                                        <img src="assets/images/user_panel/table/4.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h6>test</h6>
+                                                                        <span>80s glow worm</span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td data-label="Resolution"><span>256x256</span></td>
+                                                            <td data-label="Created On">
+                                                                <div>
+                                                                    <span class="text-bold"> 02 Apr 2023</span>
+                                                                    <br>
+                                                                    <span>07:05 AM</span>
+                                                                </div>
+                                                            </td>
+
+                                                            <td data-label="Actions">
+                                                                <div class="cmn-btn-group">
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Download Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-cloud-arrow-down"></i></button>
+
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Delete Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-trash-can"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-label="Image" scope="row">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="table-img">
+                                                                        <img src="assets/images/user_panel/table/1.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <h6>test</h6>
+                                                                        <span>A stunning wall art piece featuring an
+                                                                            abstract composition of vibrant colors and
+                                                                            bold shapes, with a focus on texture and
+                                                                            movement, creating a dynamic and engaging
+                                                                            visual experience, Artwork
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </td>
+                                                            <td data-label="Resolution"><span>256x256</span></td>
+                                                            <td data-label="Created On">
+                                                                <div>
+                                                                    <span class="text-bold"> 02 Apr 2023</span>
+                                                                    <br>
+                                                                    <span>07:05 AM</span>
+                                                                </div>
+                                                            </td>
+
+                                                            <td data-label="Actions">
+                                                                <div class="cmn-btn-group">
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Download Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-cloud-arrow-down"></i></button>
+
+                                                                    <button type="button" data-bs-toggle="tooltip"
+                                                                        data-bs-placement="top"
+                                                                        data-bs-title="Delete Image"
+                                                                        class="single-btn"><i
+                                                                            class="fa-regular fa-trash-can"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
+                                        <!-- Cmn table end -->
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>

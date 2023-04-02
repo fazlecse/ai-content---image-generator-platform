@@ -242,7 +242,7 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 
-// selcect2 template-view
+// cmn-select2-dropdown template-view
 $(document).ready(function () {
     $('.cmn-select2-dropdown').select2();
 });
@@ -261,36 +261,5 @@ function formatState(state) {
 $(".js-example-basic-single").select2({
     templateResult: formatState
 });
-
-// $(".js-example-basic-single").select2({
-//     templateResult: function (param) {
-//         var $span = $(
-//             "<span><img src='../images/mini-flag/" +
-//             param.id +
-//             "/1/tiny/" +
-//             param.id +
-//             ".png'/> " +
-//             param.text +
-//             "</span>" +
-//             "<p class='cname'>" +
-//             param.cname +
-//             "</p>"
-//         );
-//         return $span;
-//     },
-//     templateSelection: function (param) {
-//         var $span = $(
-//             "<span><img src='https://www.free-country-flags.com/countries/" +
-//             param.id +
-//             "/1/tiny/" +
-//             param.id +
-//             ".png'/> " +
-//             param.text +
-//             "</span>"
-//         );
-//         return $span;
-//     },
-//     dropdownCssClass: "bigdrop",
-// });
 
 
