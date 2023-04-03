@@ -36,9 +36,10 @@
     --transition: all .3s ease-in-out;
 }
 
-/*-------------------------------------------------------
-                    reset
--------------------------------------------------------*/
+
+// ---------------------------------------------------- 
+// Reset section start
+// ----------------------------------------------------
 ::-moz-selection {
     color: #fff;
     background: #47beb9;
@@ -67,8 +68,8 @@
 /* scroll-up_start */
 .scroll-up {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 40px;
+    right: 40px;
     z-index: 99999;
 }
 
@@ -324,7 +325,7 @@ h1 {
     font-size: 62px;
     margin-bottom: 25px;
     font-weight: 800;
-    line-height: 60px;
+    line-height: 70px;
 }
 
 h2 {
@@ -438,7 +439,31 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.5s ease-in-out;
 }
 
-/* ===========reuseble_style_start ===========*/
+// ---------------------------------------------------- 
+// Reset section start
+// ----------------------------------------------------
+
+
+// ---------------------------------------------------- 
+// Reuseble style section start
+// ----------------------------------------------------
+.offcanvas {
+    background: var(--bg-color1);
+}
+
+.offcanvas.offcanvas-end {
+    border-left: 1px solid var(--border-color1);
+}
+
+.offcanvas-backdrop {
+    background-color: #e4ebf87a;
+    backdrop-filter: blur(8.8px);
+}
+
+.offcanvas-backdrop.show {
+    opacity: 1;
+}
+
 .animation1 {
     position: relative;
     animation-name: animation1;
@@ -581,6 +606,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .login-btn {
+    display: flex;
     padding: 25px 15px;
     transition: all .5s ease-in-out;
     font-size: 15px;
@@ -608,6 +634,7 @@ body::-webkit-scrollbar-thumb {
         color: var(--white);
     }
 }
+
 // --------------------------------------------------------
 // -- Cmn tab section start --
 // --------------------------------------------------------
@@ -765,7 +792,6 @@ section {
     border-top: initial;
     height: 1px;
     margin: 50px 0;
-    // margin-top: 50px;
 
 }
 
@@ -819,9 +845,7 @@ hr.divider:after {
 
 }
 
-/* reusable_style_end */
-
-/* margin_top */
+//  Margin top 
 .mt-10 {
     margin-top: 10px;
 }
@@ -1012,7 +1036,7 @@ hr.divider:after {
     padding-top: 200px;
 }
 
-/* padding_botton */
+// Padding botton
 .pb-15 {
     padding-bottom: 15px;
 }
@@ -1069,9 +1093,13 @@ hr.divider:after {
     padding-bottom: 150px;
 }
 
-/* reuseble_style_end */
+// ---------------------------------------------------- 
+// Reuseble style section end
+// ----------------------------------------------------
 
-// Nav area start
+// ---------------------------------------------------- 
+// Nav section start
+// ----------------------------------------------------
 .navbar.active {
     background-color: var(--white);
     box-shadow: var(--shadow3);
@@ -1088,12 +1116,45 @@ hr.divider:after {
     padding: 0;
     z-index: 9999;
 
+    .navbar-brand img {
+        max-width: 50px;
+    }
+
+    .navbar-toggler {
+        background: var(--primary-color);
+        color: var(--white);
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+    }
+
+    .cmn-btn-close {
+        font-size: 18px;
+        background: var(--primary-color);
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        color: var(--white);
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        box-shadow: none;
+    }
+
     .navbar-nav {
+        text-align: center;
+
         .nav-link {
             font-size: 15px;
             font-weight: 700;
             color: var(--black);
             text-transform: capitalize;
+            padding: 25px 15px;
 
             &:hover {
                 color: var(--primary-color);
@@ -1111,14 +1172,6 @@ hr.divider:after {
 
 }
 
-.desktop-nav {
-    .navbar-nav {
-        .nav-link {
-            padding: 25px 15px;
-        }
-    }
-}
-
 .search-area {
     width: 100%;
     max-width: 520px;
@@ -1130,10 +1183,38 @@ hr.divider:after {
     }
 }
 
+// Nav responsive start
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none !important;
+    }
+}
 
-// Nav area end
+@media (max-width: 991px) {
+    .navbar {
+        .navbar-nav {
+            .nav-link {
+                padding: 15px;
+            }
+        }
 
-// Hero area start
+        .nav-right {
+            flex-direction: column;
+        }
+    }
+
+}
+
+// Nav responsive end
+
+// ---------------------------------------------------- 
+// Nav section end
+// ----------------------------------------------------
+
+// ---------------------------------------------------- 
+// Hero section start
+// ----------------------------------------------------
+
 .hero-area {
     background: var(--bg-color1);
     padding: 200px 0 50px;
@@ -1152,11 +1233,46 @@ hr.divider:after {
     }
 }
 
-// Hero area end
+// Hero responsive start
+@media (max-width: 991px) {
+    h1 {
+        font-size: 42px;
+    }
 
-// *---------------------------------------------------- */
+    .hero-area .hero-para-text {
+        font-size: 16px;
+    }
+
+    .cmn-para-text {
+        font-size: 16px;
+    }
+
+    .cmn-btn {
+        font-size: 16px;
+    }
+
+    .cmn-btn2 {
+        font-size: 16px;
+    }
+
+    .hero-area {
+        text-align: center;
+        padding: 100px 0 50px;
+    }
+
+    .hero-btn-area {
+        justify-content: center;
+    }
+}
+
+// Hero responsive end
+// ---------------------------------------------------- 
+// Hero section end
+// ----------------------------------------------------
+
+// ---------------------------------------------------- 
 // Feature section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 .feature-section {
     background: linear-gradient(rgb(255, 255, 255, .6), rgb(255, 255, 255, .6)), url(../images/background/629d16c07d66dda95458cbad_Background-03\ \(1\).webp);
@@ -1205,21 +1321,38 @@ hr.divider:after {
     }
 }
 
-// *---------------------------------------------------- */
+// Feature responsive start
+
+@media (max-width: 991px) {
+    h2 {
+        font-size: 28px;
+    }
+}
+
+// Feature responsive end
+// ----------------------------------------------------
 // Feature sectin end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
-// *---------------------------------------------------- */
+// ----------------------------------------------------
 // About section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 .about-section {
     background: var(--bg-color2);
 }
 
-// *---------------------------------------------------- */
+// About responsive start
+@media (max-width: 767px) {
+    .about-section {
+        text-align: center;
+    }
+}
+
+// About responsive end
+// ----------------------------------------------------
 // About section end
-/*----------------------------------------------------*/
+// ---------------------------------------------------
 
 // ----------------------------------------------------
 // Qr section start
@@ -1241,10 +1374,23 @@ hr.divider:after {
     .qr-section-imgae-area {
         img {
             max-width: 500px;
+            width: 100%;
         }
     }
 }
 
+// Qr responsive start
+@media (max-width: 767px) {
+    .qr-section {
+        text-align: center;
+
+        .qr-box {
+            margin: auto;
+        }
+    }
+}
+
+// Qr responsive end
 // ----------------------------------------------------
 // Qr section end
 // ----------------------------------------------------
@@ -1291,6 +1437,19 @@ hr.divider:after {
         }
     }
 }
+
+// How it works responsive start
+@media (max-width: 575px) {
+    h3 {
+        font-size: 18px;
+    }
+
+    .how-it-work .how-it-work-wrapper .section-devider-area {
+        display: none;
+    }
+}
+
+// How it works responsive end
 
 // ----------------------------------------------------
 // How it works section end
@@ -1361,12 +1520,19 @@ hr.divider:after {
             }
         }
     }
+
+    .btn-area {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .pricing-box.featured {
     border: 1px solid var(--primary-color);
     position: relative;
-    .featured-title{
+
+    .featured-title {
         position: absolute;
         background: var(--primary-color);
         top: -17px;
@@ -1377,11 +1543,76 @@ hr.divider:after {
         left: 50%;
         transform: translateX(-50%);
     }
+
     .section-header {
         border-color: var(--primary-color);
     }
 }
 
+.prepaid-plan {
+    .prepaid-title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        sup {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--grayish-blue);
+        }
+    }
+
+    .prepaid-info {
+        margin-bottom: 0;
+        color: var(--grayish-blue);
+
+        .highlight {
+            font-weight: 600;
+        }
+    }
+
+    .btn-area {
+        .cmn-btn2 {
+            width: initial !important;
+            border-radius: 30px;
+        }
+    }
+}
+
+// Pricing responsive start
+@media (max-width: 1199px) {
+    .prepaid-plan {
+        .prepaid-title {
+            font-size: 20px;
+
+            sup {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .cmn-tabs .nav-pills {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .nav-item {
+            width: 100%;
+
+            .nav-link {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+// Pricing responsive end
 // ----------------------------------------------------
 // Pricing section end
 // ----------------------------------------------------
@@ -1574,14 +1805,46 @@ hr.divider:after {
     }
 }
 
+// Testimonial responsive start
+@media (max-width: 1199px) {
+    .testimonial-indicator {
+        background-size: contain;
+    }
 
-/*---------------------------------------------------- */
+    .testimonial-indicator .carousel-indicators li:nth-child(1) {
+        bottom: 190px;
+        right: 35px;
+    }
+    .testimonial-indicator .carousel-indicators li:nth-child(2) {
+        left: 125px;
+        bottom: 125px;
+    }
+}
+@media (max-width: 991px) {
+    .testimonial-indicator .carousel-indicators li:nth-child(1) {
+        bottom: 130px;
+        right: 85px;
+    }
+    .testimonial-indicator .carousel-indicators li:nth-child(2) {
+        left: 90px;
+        bottom: 0;
+    }
+}
+@media (max-width: 575px) {
+    .testimonial-indicator{
+        display: none;
+    }
+}
+
+// Testimonial responsive end
+
+// ----------------------------------------------------
 // Testimonial section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Faq section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
 .faq-area {
@@ -1645,16 +1908,16 @@ hr.divider:after {
     }
 }
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Faq section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
 
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Newsletter section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 .newsletter-area {
     .Newslatter-title {
         color: var(--white);
@@ -1712,14 +1975,14 @@ hr.divider:after {
     }
 }
 
-/*---------------------------------------------------- */
+// ----------------------------------------------------
 // Newsletter section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Footer section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
 .footer-area {
@@ -1770,13 +2033,13 @@ hr.divider:after {
     }
 }
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Footer section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Copyright section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 .copy-right-area {
     p {
         margin-bottom: 0;
@@ -1800,17 +2063,17 @@ hr.divider:after {
 }
 
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Copyright section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
 
 
 
-/*---------------------------------------------------- */
+// ----------------------------------------------------
 // Banner section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 .banner-nav {
     background: transparent;
 }
@@ -1840,15 +2103,15 @@ hr.divider:after {
     }
 }
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Banner section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Contact section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 .contact-section {
     padding: 100px 0;
     background: var(--bg-color1);
@@ -1898,13 +2161,14 @@ hr.divider:after {
     }
 }
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Contact section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
-
-// login signup area start
+// ---------------------------------------------------- 
+// Login Signup section start
+// ----------------------------------------------------
 .login-signup-page {
     background: var(--bg-color1);
 
@@ -1969,12 +2233,14 @@ hr.divider:after {
 }
 
 // Rtl login signup page end
-// login signup area end
+// ---------------------------------------------------- 
+// Login Signup section end
+// ----------------------------------------------------
 
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Blog section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 .blog-section {
     background: var(--bg-color2);
@@ -2053,14 +2319,14 @@ hr.divider:after {
 }
 
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Blog section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
-/*---------------------------------------------------- */
+// ----------------------------------------------------
 // Blog details section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 .blog-details-section {
     .blog-details {
         .thum-inner {
@@ -2230,14 +2496,14 @@ hr.divider:after {
     color: var(--primary-color);
 }
 
-/*---------------------------------------------------- */
+// ---------------------------------------------------- 
 // Blog details section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------
 
 
-/*---------------------------------------------------- */
-//Pagination section start
-/*----------------------------------------------------*/
+// ----------------------------------------------------
+// Pagination section start
+// ----------------------------------------------------
 .pagination_area {
     .page-link {
         &:focus {
@@ -2284,6 +2550,6 @@ hr.divider:after {
     }
 }
 
-/*---------------------------------------------------- */
+// ----------------------------------------------------
 // Pagination section end
-/*----------------------------------------------------*/
+// ----------------------------------------------------

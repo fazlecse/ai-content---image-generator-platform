@@ -31,9 +31,6 @@
     --shadow1: 0px 7px 6px 0px rgba(0, 15, 44, 0.19), inset -1px 0px 27px 0px rgba(0, 0, 0, 0.29);
     --shadow2: 0px 3px 5px 0px rgba(0, 0, 0, 0.10);
     --shadow3: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
-    --drop-shadow1: drop-shadow(0 1px 2px rgba(0,
-                0, 0, 0.4));
-    --drop-shadow2: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
     --transition: all .3s ease-in-out;
 }
 
@@ -67,8 +64,8 @@
 /* scroll-up_start */
 .scroll-up {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 40px;
+    right: 40px;
     z-index: 99999;
 }
 
@@ -1568,11 +1565,11 @@ hr.divider:after {
 .sidebar::-webkit-scrollbar {
     width: 5px;
     height: 8px;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-    background-color: #aab7cf;
+    background-color: var(--primary-color);
 }
 
 @media (min-width: 1200px) {
@@ -2273,12 +2270,19 @@ hr.divider:after {
             }
         }
     }
+
+    .btn-area {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .pricing-box.featured {
     border: 1px solid var(--primary-color);
     position: relative;
-    .featured-title{
+
+    .featured-title {
         position: absolute;
         background: var(--primary-color);
         top: -17px;
@@ -2289,8 +2293,41 @@ hr.divider:after {
         left: 50%;
         transform: translateX(-50%);
     }
+
     .section-header {
         border-color: var(--primary-color);
+    }
+}
+
+.prepaid-plan {
+    .prepaid-title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        sup {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--grayish-blue);
+        }
+    }
+
+    .prepaid-info {
+        margin-bottom: 0;
+        color: var(--grayish-blue);
+        .highlight{
+            font-weight: 600;
+        }
+    }
+    
+    .btn-area {
+        .cmn-btn2 {
+            width: initial !important;
+            border-radius: 30px;
+        }
     }
 }
 
