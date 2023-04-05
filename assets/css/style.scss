@@ -12,7 +12,6 @@
     --btn-bg3: #160647;
     --btn-bg4: #37325e;
     --white: #ffffff;
-    --red: #d7373f;
     --magenta: #b125c0;
     --blue: #0057ff;
     --orange: #f6b91c;
@@ -55,7 +54,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #ffffff url(../images/preloader/cart.gif) no-repeat center;
+    background: #ffffff url(../images/preloader/preloader.gif) no-repeat center;
     z-index: 99999;
     // background-size: 20%;
 }
@@ -74,7 +73,7 @@
 }
 
 .rtl .scroll-up {
-    left: 50px;
+    left: 40px;
     right: auto;
 }
 
@@ -284,7 +283,13 @@ textarea.form-control {
         text-transform: capitalize;
     }
 }
-
+// Breadcrumb rtl start
+.rtl .breadcrumb-item+.breadcrumb-item::before{
+    float: right;
+    padding-left: var(--bs-breadcrumb-item-padding-x);
+    transform: rotate(180deg);
+}
+// Breadcrumb rtl end
 // Breadcrumb end
 
 p {
@@ -1178,7 +1183,6 @@ hr.divider:after {
     position: relative;
 
     .form-control {
-        padding: 5px 10px 5px 40px;
         border-radius: 8px;
     }
 }
@@ -1259,18 +1263,24 @@ hr.divider:after {
     .hero-area {
         padding: 100px 0 50px;
     }
-
-    .hero-btn-area {
-        justify-content: center;
-    }
 }
 @media (max-width: 767px){
     .hero-area {
         text-align: center;
     }
+    .hero-btn-area {
+        justify-content: center;
+    }
 }
 
 // Hero responsive end
+
+// Hero rtl start
+.rtl .hero-area .hero-btn-area .btn{
+    margin-right: 0;
+    margin-left: 10px;
+}
+// Hero rtl end
 // ---------------------------------------------------- 
 // Hero section end
 // ----------------------------------------------------
@@ -1335,6 +1345,14 @@ hr.divider:after {
 }
 
 // Feature responsive end
+// Feature rtl start
+
+.rtl .feature-box .icon-box{
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+// Feature rtl end
 // ----------------------------------------------------
 // Feature sectin end
 // ----------------------------------------------------
@@ -1455,6 +1473,13 @@ hr.divider:after {
 }
 
 // How it works responsive end
+
+// How it works rtl start
+.rtl .how-it-work .how-it-work-wrapper .how-it-work-item .section-header .number{
+    margin-right: 0;
+    margin-left: 15px;
+}
+// How it works rtl end
 
 // ----------------------------------------------------
 // How it works section end
@@ -1618,6 +1643,21 @@ hr.divider:after {
 }
 
 // Pricing responsive end
+
+// Pricing rtl start
+.rtl .pricing-box{
+    .section-header{
+        border-right: none;
+        border-left: 1px solid var(--primary-color-opacity-low3);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 0;
+    }
+    .section-body .pricing-feature li i{
+        margin-right: 0;
+        margin-left: 10px;
+    }
+} 
+// Pricing rtl end
 // ----------------------------------------------------
 // Pricing section end
 // ----------------------------------------------------
@@ -1854,6 +1894,13 @@ hr.divider:after {
 
 // Testimonial responsive end
 
+// Testimonial rtl start
+.rtl .testimonial-name-designation .testimonial-img{
+    margin-right: 0;
+    margin-left: 18px;
+}
+// Testimonial rtl end
+
 // ----------------------------------------------------
 // Testimonial section end
 // ----------------------------------------------------
@@ -1905,7 +1952,7 @@ hr.divider:after {
         background-size: 50%;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 50%;
+        border-radius: 8px;
     }
 
     &:not(.collapsed) {
@@ -1917,11 +1964,16 @@ hr.divider:after {
             background-size: 50%;
             background-repeat: no-repeat;
             background-position: center;
-            border-radius: 50%;
+            border-radius: 8px;
         }
     }
 }
-
+// Faq rtl start
+.rtl .accordion-button::after{
+    margin-right: auto;
+    margin-left: 0;
+}
+// Faq rtl end
 // ---------------------------------------------------- 
 // Faq section end
 // ----------------------------------------------------
@@ -2042,6 +2094,18 @@ hr.divider:after {
 
 // Blog responsive end
 
+// Blog responsive start
+.rtl .blog-box{
+    .blog-author{
+        transform: translate(-20px, -30px);
+        .author-img {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+}  
+// Blog responsive end
+
 // ---------------------------------------------------- 
 // Blog section end
 // ----------------------------------------------------
@@ -2135,6 +2199,26 @@ hr.divider:after {
 
 // Newslatter responsive end
 
+// Newslatter rtl start
+.rtl .subscribe-form{
+    input{
+        padding: 0 30px 0 65px;
+    }
+    button{
+        left: 0;
+        right: auto;
+        i{
+            transform: rotate(180deg);
+        }
+    }
+}
+@media (max-width: 575px){
+    .rtl .subscribe-form input{
+        padding: 0 30px 0 45px;
+    }
+}
+// Newslatter rtl end
+
 // ----------------------------------------------------
 // Newsletter section end
 // ----------------------------------------------------
@@ -2193,6 +2277,12 @@ hr.divider:after {
     }
 }
 
+// Footer rtl start
+.rtl .footer-area .footer-widget h5::after{
+    right: 0;
+    left: auto;
+}
+// Footer rtl end
 // ---------------------------------------------------- 
 // Footer section end
 // ----------------------------------------------------
@@ -2327,6 +2417,13 @@ hr.divider:after {
     }
 }
 // Contact responsive end
+
+// Contact rtl start
+.rtl .contact-section .contact-area{
+    border-top-right-radius: 0;
+    border-top-left-radius: 200px;
+}
+// Contact rtl end
 
 // ---------------------------------------------------- 
 // Contact section end
@@ -2587,6 +2684,22 @@ hr.divider:after {
     color: var(--primary-color);
 }
 
+// Blog details rtl start
+.rtl .blog-details-section{
+    .blog-widget-content{
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .blog-details .blog-author .author-img{
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    .blog-details .blog-author{
+        transform: translate(-40px, -40px);
+    }
+} 
+// Blog details rtl end
+
 // ---------------------------------------------------- 
 // Blog details section end
 // ----------------------------------------------------
@@ -2607,8 +2720,8 @@ hr.divider:after {
     ul {
         li {
             a {
-                width: 45px;
-                height: 45px;
+                width: 40px;
+                height: 40px;
                 border-radius: 8px !important;
                 color: var(--heading-color);
                 background-color: var(--white);
@@ -2640,7 +2753,11 @@ hr.divider:after {
         }
     }
 }
-
+// Pagination rtl start
+.rtl .pagination_area ul li i{
+    transform: rotate(180deg);
+}
+// Pagination rtl end
 // ----------------------------------------------------
 // Pagination section end
 // ----------------------------------------------------

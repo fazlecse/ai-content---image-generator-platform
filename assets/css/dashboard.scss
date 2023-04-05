@@ -52,7 +52,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #ffffff url(../images/preloader/cart.gif) no-repeat center;
+    background: #ffffff url(../images/preloader/preloader.gif) no-repeat center;
     z-index: 99999;
 }
 
@@ -278,6 +278,11 @@ textarea.form-control {
     text-align: right;
 }
 
+.rtl .select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+    justify-content: end;
+}
+
 // Select2 end
 // Breadcrumb start
 .breadcrumb {
@@ -303,6 +308,14 @@ textarea.form-control {
     }
 }
 
+// Breadcrumb rtl start
+.rtl .breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: var(--bs-breadcrumb-item-padding-x);
+    transform: rotate(180deg);
+}
+
+// Breadcrumb rtl end
 // Breadcrumb end
 
 
@@ -840,11 +853,6 @@ hr.divider:after {
 
 }
 
-.filter .dropdown-menu .dropdown-item:hover {
-    background: var(--primary-color);
-    color: var(--white) !important;
-}
-
 
 // --------------------------------------------------------
 // -- Responsive table section start
@@ -1144,6 +1152,10 @@ hr.divider:after {
     padding: 10px 25px;
 }
 
+.rtl .dropdown-menu .dropdown-header {
+    padding: 25px 10px;
+}
+
 /* Card */
 .card {
     border: none;
@@ -1277,6 +1289,25 @@ hr.divider:after {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+// Card rtl start
+.rtl .card-item {
+    .card-title i {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    .number::after {
+        left: auto;
+        right: 0;
+    }
+}
+
+.rtl .card-title i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+// Card rtl end
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
@@ -1322,6 +1353,11 @@ hr.divider:after {
     margin-right: 6px;
 }
 
+.rtl .logo img {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
 .logo span {
     font-size: 26px;
     font-weight: 700;
@@ -1337,6 +1373,7 @@ hr.divider:after {
     background-color: var(--white);
     padding-left: 20px;
 }
+
 
 .header .toggle-sidebar-btn {
     font-size: 28px;
@@ -1395,6 +1432,23 @@ hr.divider:after {
     color: var(--heading-color);
 }
 
+// Header rtl start
+.rtl .header {
+    padding-left: 0;
+    padding-right: 20px;
+
+    .search-form button {
+        margin-left: 0;
+        margin-right: -30px;
+    }
+
+    .toggle-sidebar-btn {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
+
+// Header rtl end
 /*--------------------------------------------------------------
   # Header Nav
   --------------------------------------------------------------*/
@@ -1426,6 +1480,7 @@ hr.divider:after {
     font-size: 14px;
     font-weight: 600;
 }
+
 
 .header-nav .badge-number {
     position: absolute;
@@ -1536,6 +1591,70 @@ hr.divider:after {
 }
 
 
+// Header Nav rtl start
+.rtl nav.header-nav.ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.rtl .nav-item.dropdown.pe-3 {
+    padding-right: 0 !important;
+    padding-left: 16px;
+}
+
+.rtl .header-nav {
+    .nav-profile span {
+        padding-left: 0 !important;
+        padding-right: 8px;
+    }
+
+    .nav-icon {
+        margin-right: 0;
+        margin-left: 25px;
+    }
+
+    .notifications {
+        inset: 8px -230px auto auto !important;
+
+        .notification-item i {
+            margin: 0 10px 0 20px;
+        }
+    }
+
+    .messages {
+        inset: 8px -230px auto auto !important;
+
+        .message-item img {
+            margin: 0 10px 0 20px;
+        }
+    }
+
+    .profile .dropdown-item i {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 438px) {
+    .rtl .header-nav {
+        .notifications {
+            inset: 8px -15px auto auto !important;
+
+        }
+    }
+
+}
+
+@media (max-width: 367px) {
+    .rtl .header-nav {
+        .messages {
+            inset: 8px -15px auto auto !important;
+        }
+    }
+
+}
+
+// Header Nav rtl end
 
 /*--------------------------------------------------------------
 # Sidebar
@@ -1730,6 +1849,16 @@ hr.divider:after {
     background-color: #4154f1;
 }
 
+// Sidebar rtl start
+.rtl .sidebar-nav .nav-link i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.rtl .sidebar-nav .upgrade-btn-area .cmn-btn2 i{
+    margin-right: 0;
+    margin-left: 5px;
+}
+// Sidebar rtl end
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
@@ -1738,6 +1867,16 @@ hr.divider:after {
     position: absolute;
     right: 0px;
     top: 15px;
+}
+
+.rtl .dashboard .filter {
+    left: 0;
+    right: auto;
+
+    .icon {
+        padding-right: 0;
+        padding-left: 15px;
+    }
 }
 
 .dashboard .filter .icon {
@@ -2080,12 +2219,14 @@ hr.divider:after {
         min-height: 700px;
     }
 }
+
 .cmn-btn-group {
     .single-btn {
         margin-right: 5px;
         margin-bottom: 5px;
     }
-    .single-btn .active{
+
+    .single-btn .active {
         background: var(--primary-color);
         color: var(--white);
     }
@@ -2109,6 +2250,13 @@ hr.divider:after {
     }
 }
 
+// User panel templates blog rtl start
+.rtl .section-left-card .template-view .templete-title-area .template-icon-area .item:first-child i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+// User panel templates blog rtl end
 // ----------------------------------------------------
 // User-panel-templates-blog-section end
 // ----------------------------------------------------
@@ -2184,8 +2332,9 @@ hr.divider:after {
             }
         }
     }
-    tbody{
-        td{
+
+    tbody {
+        td {
             padding: 20px 10px;
         }
     }
@@ -2201,18 +2350,43 @@ hr.divider:after {
         }
     }
 }
+
 // Ai image responsive start
-@media (max-width: 991px){
-    .cmn-btn{
+@media (max-width: 991px) {
+    .cmn-btn {
         font-size: 16px;
     }
 }
-@media (max-width: 575px){
-    .cmn-btn{
+
+@media (max-width: 575px) {
+    .cmn-btn {
         padding: 7px;
     }
 }
+
 // Ai image responsive end
+
+// Ai image rtl start
+.rtl .cmn-table-card .search-bar {
+    margin-right: 0;
+    margin-left: 20px;
+
+    button {
+        margin-left: 0;
+        margin-right: -30px;
+    }
+
+    .form-control {
+        padding: 5px 5px 5px 35px;
+    }
+}
+
+.rtl .cmn-table .table-img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+// Ai image rtl end
 // ----------------------------------------------------
 // Ai images section end
 // ----------------------------------------------------
@@ -2330,11 +2504,12 @@ hr.divider:after {
     .prepaid-info {
         margin-bottom: 0;
         color: var(--grayish-blue);
-        .highlight{
+
+        .highlight {
             font-weight: 600;
         }
     }
-    
+
     .btn-area {
         .cmn-btn2 {
             width: initial !important;
@@ -2355,9 +2530,10 @@ hr.divider:after {
         }
     }
 }
+
 @media (max-width: 575px) {
-    .pricing{
-        .card-body{
+    .pricing {
+        .card-body {
             padding: 0;
         }
     }
@@ -2380,7 +2556,21 @@ hr.divider:after {
 
     }
 }
-
+// Pricing responsive end
+// Pricing rtl start
+.rtl .pricing-box{
+    .section-header{
+        border-right: none;
+        border-left: 1px solid var(--primary-color-opacity-low3);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 0;
+    }
+    .section-body .pricing-feature li i{
+        margin-right: 0;
+        margin-left: 10px;
+    }
+} 
+// Pricing rtl end
 // ----------------------------------------------------
 // Pricing section end
 // ----------------------------------------------------
