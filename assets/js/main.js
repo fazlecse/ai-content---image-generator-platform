@@ -21,8 +21,6 @@ window.addEventListener("scroll", function () {
 
 
 $(document).ready(function () {
-
-
     // discover carousel
     $('.carousel-area1').owlCarousel({
         loop: true,
@@ -188,16 +186,6 @@ $(document).ready(function () {
         dropdownParent: $("#formModal2"),
     });
 
-
-    // scroll-up
-    $(".scroll-up").fadeOut();
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $(".scroll-up").fadeIn();
-        } else {
-            $(".scroll-up").fadeOut();
-        }
-    });
 
 
 });

@@ -4,6 +4,12 @@ var preloader = document.getElementById("preloader");
 function preloder_function() {
     preloader.style.display = "none";
 }
+// toggleSideMenu start
+const toggleSideMenu = () => {
+    document.body.classList.toggle("toggle-sidebar");
+};
+// toggleSideMenu end
+
 
 (function () {
     "use strict";
@@ -41,15 +47,16 @@ function preloder_function() {
     /**
      * Sidebar toggle
      */
-    if (select('.toggle-sidebar-btn')) {
-        on('click', '.toggle-sidebar-btn', function (e) {
-            select('body').classList.toggle('toggle-sidebar')
-        })
-    }
+    // if (select('.toggle-sidebar-btn')) {
+    //     on('click', '.toggle-sidebar-btn', function (e) {
+    //         select('body').classList.toggle('toggle-sidebar')
+    //     })
+    // }
 
-    /**
-     * Search bar toggle
-     */
+
+
+    // //  Search bar toggle
+
     if (select('.search-bar-toggle')) {
         on('click', '.search-bar-toggle', function (e) {
             select('.search-bar').classList.toggle('search-bar-show')

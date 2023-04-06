@@ -61,7 +61,7 @@
     direction: rtl;
 }
 
-/* scroll-up_start */
+// scroll up start
 .scroll-up {
     position: fixed;
     bottom: 40px;
@@ -72,6 +72,17 @@
 .rtl .scroll-up {
     left: 50px;
     right: auto;
+}
+
+@media (max-width: 767px) {
+    .scroll-up {
+        bottom: 50px;
+        right: 20px;
+    }
+
+    .rtl .scroll-up {
+        left: 20px;
+    }
 }
 
 .scroll-up i {
@@ -91,7 +102,7 @@
     }
 }
 
-/* scroll-up_end */
+// scrol lup end 
 
 
 *,
@@ -215,8 +226,9 @@ textarea.form-control {
     padding: .375rem 15px;
 }
 
+
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-    padding: 0;
+    padding-right: 10px;
 }
 
 .select2-container .select2-selection--single:focus,
@@ -227,6 +239,17 @@ textarea.form-control {
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     top: 5px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: var(--primary-color) transparent transparent transparent;
+    border-width: 5px 6px 0 6px;
+    margin-left: -10px;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent var(--primary-color) transparent;
+    border-width: 0 6px 5px 6px;
 }
 
 .select2-container .select2-dropdown {
@@ -246,6 +269,7 @@ textarea.form-control {
 
 .select2-results__option {
     padding: 6px 15px;
+    border-radius: 5px;
 }
 
 .select2-container--default .select2-results__option--selected {
@@ -259,6 +283,7 @@ textarea.form-control {
 
 .select2-container--default .select2-results>.select2-results__options {
     text-transform: capitalize;
+    padding: 5px;
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
@@ -1333,7 +1358,49 @@ hr.divider:after {
     }
 }
 
+// ---------------------------------------------------- 
+// Bottom Mobile Tab nav section start
+// ----------------------------------------------------
+.bottom-nav {
+    background: var(--white);
+    justify-content: space-around;
+    box-shadow: var(--shadow3);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 55px;
+    display: flex;
+    align-items: center;
 
+    .nav-item {
+        .nav-link {
+            color: var(--heading-color);
+            width: 45px;
+            height: 45px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+
+            &.active,
+            &:hover {
+                color: var(--white);
+                background: var(--primary-color);
+                margin-top: -22px;
+            }
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+    }
+}
+
+// ---------------------------------------------------- 
+// Bottom Mobile Tab nav section end
+// ----------------------------------------------------
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -1854,10 +1921,12 @@ hr.divider:after {
     margin-right: 0;
     margin-left: 10px;
 }
-.rtl .sidebar-nav .upgrade-btn-area .cmn-btn2 i{
+
+.rtl .sidebar-nav .upgrade-btn-area .cmn-btn2 i {
     margin-right: 0;
     margin-left: 5px;
 }
+
 // Sidebar rtl end
 /*--------------------------------------------------------------
 # Dashboard
@@ -2556,20 +2625,23 @@ hr.divider:after {
 
     }
 }
+
 // Pricing responsive end
 // Pricing rtl start
-.rtl .pricing-box{
-    .section-header{
+.rtl .pricing-box {
+    .section-header {
         border-right: none;
         border-left: 1px solid var(--primary-color-opacity-low3);
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 0;
     }
-    .section-body .pricing-feature li i{
+
+    .section-body .pricing-feature li i {
         margin-right: 0;
         margin-left: 10px;
     }
-} 
+}
+
 // Pricing rtl end
 // ----------------------------------------------------
 // Pricing section end
@@ -2597,6 +2669,14 @@ hr.divider:after {
     }
 }
 
+// Footer responsive start
+@media (max-width: 767px) {
+    .footer {
+        padding-bottom: 60px;
+    }
+}
+
+// Footer responsive end
 
 // ----------------------------------------------------
 // Footer it works section start
