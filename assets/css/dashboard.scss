@@ -1917,6 +1917,9 @@ hr.divider:after {
 }
 
 // Sidebar rtl start
+.rtl .sidebar{
+    right: 0;
+}
 .rtl .sidebar-nav .nav-link i {
     margin-right: 0;
     margin-left: 10px;
@@ -1926,7 +1929,26 @@ hr.divider:after {
     margin-right: 0;
     margin-left: 5px;
 }
+@media(min-width: 1200px) {
+    .rtl #main, #footer {
+        margin-right: 300px;
+        margin-left: 0;
+    }
+}
+@media(min-width: 1200px) {
+    .rtl.toggle-sidebar #main,.toggle-sidebar #footer {
+        margin-right: 0;
+    }
 
+  .rtl.toggle-sidebar .sidebar {
+        right: -300px;
+    }
+}
+@media (max-width: 1199px) {
+    .rtl .sidebar {
+        right: -300px;
+    }
+}
 // Sidebar rtl end
 /*--------------------------------------------------------------
 # Dashboard
@@ -2677,7 +2699,6 @@ hr.divider:after {
 }
 
 // Footer responsive end
-
 // ----------------------------------------------------
 // Footer it works section start
 // ----------------------------------------------------

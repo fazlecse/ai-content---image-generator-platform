@@ -45,7 +45,7 @@
                 <img src="assets/images/logo/chatbot.png" alt="">
                 <span class="d-none d-lg-block">Best Ai</span>
             </a>
-            <i class="fa-regular fa-bars-staggered toggle-sidebar-btn"></i>
+            <button onclick="toggleSideMenu()" class="toggle-sidebar-btn d-none d-md-block"><i class="fa-regular fa-bars-staggered"></i></button>
         </div><!-- End Logo -->
 
         <div class="search-bar">
@@ -55,17 +55,17 @@
             </form>
         </div><!-- End Search Bar -->
 
+
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-                <li class="nav-item d-block d-xl-none">
+                <li class="nav-item d-none d-md-block d-xl-none">
                     <a class="nav-link nav-icon search-bar-toggle " href="#">
                         <i class="fa-regular fa-magnifying-glass"></i>
                     </a>
                 </li><!-- End Search Icon-->
 
                 <li class="nav-item dropdown">
-
                     <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                         <i class="fa-regular fa-bell"></i>
                         <span class="badge bg-primary badge-number">4</span>
@@ -273,6 +273,32 @@
         </nav><!-- End Icons Navigation -->
 
     </header><!-- End Header -->
+
+    <!-------------------------------------------------------->
+    <!-- Bottom Mobile Tab nav section start -->
+    <!-------------------------------------------------------->
+    <ul class="nav bottom-nav fixed-bottom d-md-none">
+        <li class="nav-item">
+            <a onclick="toggleSideMenu()" class="nav-link toggle-sidebar" aria-current="page"><i
+                    class="fa-regular fa-bars-staggered"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-regular fa-shuttle-space"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
+                    class="fa-regular fa-magnifying-glass"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
+        </li>
+    </ul>
+    <!-------------------------------------------------------->
+    <!-- Bottom Mobile Tab nav section end -->
+    <!-------------------------------------------------------->
 
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
