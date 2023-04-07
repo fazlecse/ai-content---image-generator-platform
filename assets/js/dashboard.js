@@ -264,9 +264,33 @@ function formatState(state) {
     );
     return $state;
 };
-
+// select2
 $(".js-example-basic-single").select2({
     templateResult: formatState
+});
+
+
+$(document).ready(function () {
+    // owl carousel dashboard card
+    $('.carousel-area1').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 20,
+        nav: false,
+        dots: false,
+        // rtl:true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            991: {
+                items: 2
+            }
+        }
+    });
 });
 
 

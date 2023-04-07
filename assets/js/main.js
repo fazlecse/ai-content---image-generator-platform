@@ -19,9 +19,8 @@ window.addEventListener("scroll", function () {
 });
 
 
-
 $(document).ready(function () {
-    // discover carousel
+    // owl carousel dashboard card
     $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
@@ -36,24 +35,9 @@ $(document).ready(function () {
             400: {
                 items: 2
             },
-            600: {
-                items: 3
-            },
-            800: {
-                items: 4
-            },
-            1000: {
-                items: 5
-            },
-            1220: {
-                items: 6
-            },
-            1450: {
-                items: 7
-            },
-            1620: {
-                items: 8
-            },
+            991: {
+                items: 2
+            }
         }
     });
 

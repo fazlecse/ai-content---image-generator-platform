@@ -37,11 +37,12 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="user-panel.html" class="logo d-flex align-items-center">
                 <img src="assets/images/logo/chatbot.png" alt="">
                 <span class="d-none d-lg-block">Best Ai</span>
             </a>
-            <button onclick="toggleSideMenu()" class="toggle-sidebar-btn d-none d-md-block"><i class="fa-regular fa-bars-staggered"></i></button>
+            <button onclick="toggleSideMenu()" class="toggle-sidebar-btn d-none d-lg-block"><i
+                    class="fa-regular fa-bars-staggered"></i></button>
         </div><!-- End Logo -->
 
         <div class="search-bar">
@@ -55,7 +56,7 @@
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-                <li class="nav-item d-none d-md-block d-xl-none">
+                <li class="nav-item d-none d-lg-block d-xl-none">
                     <a class="nav-link nav-icon search-bar-toggle " href="#">
                         <i class="fa-regular fa-magnifying-glass"></i>
                     </a>
@@ -213,7 +214,7 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="assets/images/profile/1.webp" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">John Doe</span>
+                        <span class="d-none d-lg-block dropdown-toggle ps-2">John Doe</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -273,7 +274,7 @@
     <!-------------------------------------------------------->
     <!-- Bottom Mobile Tab nav section start -->
     <!-------------------------------------------------------->
-    <ul class="nav bottom-nav fixed-bottom d-md-none">
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
         <li class="nav-item">
             <a onclick="toggleSideMenu()" class="nav-link toggle-sidebar" aria-current="page"><i
                     class="fa-regular fa-bars-staggered"></i></a>
@@ -389,139 +390,225 @@
 
         <div class="section dashboard">
             <!-- Left side columns -->
-            <div class="row g-4">
-                <!-- Documents Card -->
-                <div class="col-xxl-3 col-sm-6 card-item">
-                    <div class="card info-card sales-card">
+            <div class="tab-mobile-view-carousel-area mb-30 d-lg-none">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="owl-carousel owl-theme carousel-area1">
+                            <div class="item card-item">
+                                <!-- Documents Card -->
+                                <div class="card info-card sales-card card1-bg">
 
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i
-                                    class="fa-regular fa-ellipsis"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-sharp fa-regular fa-file-word"></i>Documents
+                                            Created</h5>
 
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
+                                        <div class="number number1 d-flex align-items-center">
+                                            <div>
+                                                <h6>145</h6>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fa-sharp fa-regular fa-file-word"></i>Documents
-                                Created</h5>
-
-                            <div class="number d-flex align-items-center">
-                                <div>
-                                    <h6>145</h6>
                                 </div>
+                                <!-- End Documents Card -->
+                            </div>
+                            <div class="item card-item">
+                                <!-- Words Card -->
+                                <div class="card info-card revenue-card card2-bg">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-regular fa-scroll lime-green"></i> Words
+                                            Generated
+                                        </h5>
+
+                                        <div class="number number2 d-flex align-items-center">
+                                            <div>
+                                                <h6>23</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Words Card -->
+                            </div>
+                            <div class="item card-item">
+                                <!-- Images Card -->
+                                <div class="card info-card customers-card card3-bg">
+
+
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-regular fa-image dark-blue"></i> Images
+                                            Created</h5>
+
+                                        <div class="number number3 d-flex align-items-center">
+                                            <div>
+                                                <h6>195</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End Images Card -->
+                            </div>
+                            <div class="item card-item">
+                                <!-- Customers Card -->
+                                <div class="card info-card customers-card card4-bg">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title"><i class="fa-regular fa-cloud-word soft-blue"></i>
+                                            Templates Used
+                                        </h5>
+
+                                        <div class="number number4 d-flex align-items-center">
+                                            <div>
+                                                <h6>200</h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End Customers Card -->
                             </div>
                         </div>
-
                     </div>
-                </div><!-- End Documents Card -->
-
-                <!-- Words Card -->
-                <div class="col-xxl-3 col-sm-6 card-item">
-                    <div class="card info-card revenue-card">
-
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i
-                                    class="fa-regular fa-ellipsis"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fa-regular fa-scroll"></i> Words Generated </h5>
-
-                            <div class="number d-flex align-items-center">
-                                <div>
-                                    <h6>23</h6>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div><!-- End Words Card -->
-
-                <!-- Images Card -->
-                <div class="col-xxl-3 col-sm-6 card-item">
-
-                    <div class="card info-card customers-card">
-
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i
-                                    class="fa-regular fa-ellipsis"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fa-regular fa-image"></i> Images Created</h5>
-
-                            <div class="number d-flex align-items-center">
-                                <div>
-                                    <h6>195</h6>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div><!-- End Images Card -->
-                <!-- Customers Card -->
-                <div class="col-xxl-3 col-sm-6 card-item">
-
-                    <div class="card info-card customers-card">
-
-                        <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i
-                                    class="fa-regular fa-ellipsis"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                    <h6>Filter</h6>
-                                </li>
-
-                                <li><a class="dropdown-item" href="#">Today</a></li>
-                                <li><a class="dropdown-item" href="#">This Month</a></li>
-                                <li><a class="dropdown-item" href="#">This Year</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fa-regular fa-cloud-word"></i> Templates Used</h5>
-
-                            <div class="number d-flex align-items-center">
-                                <div>
-                                    <h6>200</h6>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div><!-- End Customers Card -->
+                </div>
             </div>
+            <div class="col-12 d-none d-lg-block">
+                <div class="row g-4">
+                    <!-- Documents Card -->
+                    <div class="col-xxl-3 col-sm-6 card-item">
+                        <div class="card info-card sales-card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                        class="fa-regular fa-ellipsis"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fa-sharp fa-regular fa-file-word"></i>Documents
+                                    Created</h5>
+
+                                <div class="number d-flex align-items-center">
+                                    <div>
+                                        <h6>145</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Documents Card -->
+
+                    <!-- Words Card -->
+                    <div class="col-xxl-3 col-sm-6 card-item">
+                        <div class="card info-card revenue-card">
+
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                        class="fa-regular fa-ellipsis"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fa-regular fa-scroll"></i> Words Generated </h5>
+
+                                <div class="number d-flex align-items-center">
+                                    <div>
+                                        <h6>23</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Words Card -->
+
+                    <!-- Images Card -->
+                    <div class="col-xxl-3 col-sm-6 card-item">
+
+                        <div class="card info-card customers-card">
+
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                        class="fa-regular fa-ellipsis"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fa-regular fa-image"></i> Images Created</h5>
+
+                                <div class="number d-flex align-items-center">
+                                    <div>
+                                        <h6>195</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- End Images Card -->
+
+                    <!-- Customers Card -->
+                    <div class="col-xxl-3 col-sm-6 card-item">
+
+                        <div class="card info-card customers-card">
+
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                        class="fa-regular fa-ellipsis"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" href="#">Today</a></li>
+                                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fa-regular fa-cloud-word"></i> Templates Used</h5>
+
+                                <div class="number d-flex align-items-center">
+                                    <div>
+                                        <h6>200</h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- End Customers Card -->
+                </div>
+            </div>
+
+
             <div class="row">
                 <!-- Templates -->
                 <div class="col-12">
-                    <div class="card mt-50">
+                    <div class="card mt-lg-5 mt-0">
                         <div class="card-header border-0">
                             <h5 class="card-title"><i class="fa-regular fa-stars"></i>Favorite Templates </h5>
                             <p>Need to create a content? We got you covered! Checkout the list of templates that
@@ -857,6 +944,8 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2_Js_link -->
     <script src="assets/js/select2.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
 
 
     <!-- Main Js slink -->
