@@ -396,9 +396,12 @@
                                                         <i class="fa-regular fa-image"></i> <span
                                                             class="template-title">AI Image Generator</span>
                                                     </div>
-                                                    <div class="item item2">
-                                                        <a href=""><i class="star fa-regular fa-star"></i></a>
+                                                    <div class="btn-area d-lg-none">
+                                                        <button type="button" class="cmn-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#image-generator-modal">Filter<i
+                                                                class="fa-regular fa-filter"></i></button>
                                                     </div>
+
                                                 </div>
                                             </div>
                                             <div class="template-view-info">Nobody wants to read boring blog titles,
@@ -406,53 +409,56 @@
                                                 catchy
                                                 blog titles with this tool</div>
                                         </div>
-                                        <div class="row g-3">
-                                            <div class="col-sm-12">
-                                                <label class="mt-3"></label>
-                                                <input type="text" class="form-control" id="inputEmail4"
-                                                    placeholder="Your Balance is 0 Words" disabled>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputAddress" class="form-label">Language</label>
-                                                <select class="js-example-basic-single" name="state">
-                                                    <option value="ae">English (USA)</option>
-                                                    <option value="cn">Bulgarian (Bulgaria)</option>
-                                                    <option value="es"> Chinese (Mandarin)</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Example
-                                                    textarea</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                    placeholder="e.g. Describe your blog post" rows="3"></textarea>
+                                        <div class="col-12 d-none d-lg-block">
+                                            <div class="row g-3">
+                                                <div class="col-sm-12">
+                                                    <label class="mt-3"></label>
+                                                    <input type="text" class="form-control" id="inputEmail4"
+                                                        placeholder="Your Balance is 0 Words" disabled>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress" class="form-label">Language</label>
+                                                    <select class="js-example-basic-single" name="state">
+                                                        <option value="ae">English (USA)</option>
+                                                        <option value="cn">Bulgarian (Bulgaria)</option>
+                                                        <option value="es"> Chinese (Mandarin)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="exampleFormControlTextarea1" class="form-label">Example
+                                                        textarea</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        placeholder="e.g. Describe your blog post" rows="3"></textarea>
 
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputAddress" class="form-label">Creativity</label>
-                                                <select class="cmn-select2-dropdown" name="state">
-                                                    <option value="AL">Low</option>
-                                                    <option value="WY">Average</option>
-                                                    <option value="WY">High</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="inputAddress" class="form-label">Number of Results</label>
-                                                <select class="cmn-select2-dropdown" name="state">
-                                                    <option value="AL">1</option>
-                                                    <option value="WY">2</option>
-                                                    <option value="WY">3</option>
-                                                    <option value="WY">4</option>
-                                                    <option value="WY">5</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="inputCity" class="form-label">Max Result Length</label>
-                                                <input type="text" class="form-control" id="inputCity" value="200"
-                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="btn-area">
-                                                    <button type="submit" class="cmn-btn">generate image</button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="inputAddress" class="form-label">Creativity</label>
+                                                    <select class="cmn-select2-dropdown" name="state">
+                                                        <option value="AL">Low</option>
+                                                        <option value="WY">Average</option>
+                                                        <option value="WY">High</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="inputAddress" class="form-label">Number of
+                                                        Results</label>
+                                                    <select class="cmn-select2-dropdown" name="state">
+                                                        <option value="AL">1</option>
+                                                        <option value="WY">2</option>
+                                                        <option value="WY">3</option>
+                                                        <option value="WY">4</option>
+                                                        <option value="WY">5</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="inputCity" class="form-label">Max Result Length</label>
+                                                    <input type="text" class="form-control" id="inputCity" value="200"
+                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="generate-btn-area">
+                                                        <button type="submit" class="cmn-btn">generate image</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -764,15 +770,89 @@
 
 
 
-    <script>
-        var editor1cfg = {}
-        editor1cfg.toolbar = "basic";
-        var editor1 = new RichTextEditor("#div_editor1", editor1cfg);
-    </script>
+    <!-- Modal section start -->
 
+    <!-- Image generate modal start-->
+    <div class="modal fade image-generator-modal" id="image-generator-modal" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="template-view">
+                        <div class="templete-title-area">
+                            <div class="template-icon-area">
+                                <div class="item item1">
+                                    <i class="fa-regular fa-image"></i> <span class="template-title">AI Image
+                                        Generator</span>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="formModal">
 
+                    <div class="col-12">
+                        <div class="row g-3">
+                            <div class="col-sm-12">
+                                <label class="mt-3"></label>
+                                <input type="text" class="form-control" id="inputEmail4"
+                                    placeholder="Your Balance is 0 Words" disabled>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Language</label>
+                                <select class="modal-select" name="state">
+                                    <option value="ae">English (USA)</option>
+                                    <option value="cn">Bulgarian (Bulgaria)</option>
+                                    <option value="es"> Chinese (Mandarin)</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="exampleFormControlTextarea1" class="form-label">Example
+                                    textarea</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    placeholder="e.g. Describe your blog post" rows="3"></textarea>
 
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Creativity</label>
+                                <select class="modal-select" name="state">
+                                    <option value="AL">Low</option>
+                                    <option value="WY">Average</option>
+                                    <option value="WY">High</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="inputAddress" class="form-label">Number of
+                                    Results</label>
+                                <select class="modal-select" name="state">
+                                    <option value="AL">1</option>
+                                    <option value="WY">2</option>
+                                    <option value="WY">3</option>
+                                    <option value="WY">4</option>
+                                    <option value="WY">5</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="inputCity" class="form-label">Max Result Length</label>
+                                <input type="text" class="form-control" id="inputCity" value="200"
+                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                            </div>
+                            <div class="col-12">
+                                <div class="generate-btn-area">
+                                    <button type="submit" class="cmn-btn">generate image</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image generate modal end-->
+    
+    <!-- Modal section end -->
 
 
 

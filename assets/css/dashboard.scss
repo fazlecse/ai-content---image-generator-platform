@@ -1302,30 +1302,38 @@ hr.divider:after {
     background: var(--soft-blue);
 }
 
-.card1-bg{
-    background: rgb(229, 112, 78, 0.1) !important;  
+.card1-bg {
+    background: rgb(229, 112, 78, 0.1) !important;
 }
-.card2-bg{
+
+.card2-bg {
     background: rgb(64, 183, 129, 0.1) !important;
 }
-.card3-bg{
+
+.card3-bg {
     background: rgb(12, 98, 178, 0.1) !important;
 }
-.card4-bg{
-    background: rgb(82, 80, 246, 0.1) !important; 
+
+.card4-bg {
+    background: rgb(82, 80, 246, 0.1) !important;
 }
-.soft-red{
+
+.soft-red {
     background: var(--soft-red) !important;
 }
-.lime-green{
+
+.lime-green {
     background: var(--lime-green) !important;
 }
-.dark-blue{
+
+.dark-blue {
     background: var(--dark-blue) !important;
 }
-.soft-blue{
+
+.soft-blue {
     background: var(--soft-blue) !important;
 }
+
 .number1::after {
     background: var(--soft-red);
     position: absolute;
@@ -1335,6 +1343,7 @@ hr.divider:after {
     bottom: -20px;
     left: 0;
 }
+
 .number1::after {
     background: var(--soft-red) !important;
     position: absolute;
@@ -1344,6 +1353,7 @@ hr.divider:after {
     bottom: -20px;
     left: 0;
 }
+
 .number2::after {
     background: var(--lime-green) !important;
     position: absolute;
@@ -1353,6 +1363,7 @@ hr.divider:after {
     bottom: -20px;
     left: 0;
 }
+
 .number3::after {
     background: var(--dark-blue) !important;
     position: absolute;
@@ -1362,6 +1373,7 @@ hr.divider:after {
     bottom: -20px;
     left: 0;
 }
+
 .number4::after {
     background: var(--soft-blue) !important;
     position: absolute;
@@ -1385,6 +1397,15 @@ hr.divider:after {
 .card-img-overlay {
     background-color: rgba(255, 255, 255, 0.6);
 }
+
+// Tab mobile view Card responsive start
+// @media (max-width: 991px) {
+//     .card-item .card {
+//         margin-right: 20px;
+//     }
+// }
+
+// Tab mobile view Card responsive end
 
 // Card rtl start
 .rtl .card-item {
@@ -2006,7 +2027,7 @@ hr.divider:after {
 @media(min-width: 1200px) {
 
     .rtl #main,
-    #footer {
+    .rtl #footer {
         margin-right: 300px;
         margin-left: 0;
     }
@@ -2034,6 +2055,66 @@ hr.divider:after {
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
+// Quick links section start
+.quick-links-section {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.quick-link-box {
+    padding: 20px 10px;
+    box-shadow: var(--shadow3);
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+
+    .quick-links-box-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .icon-area {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background: var(--primary-color-opacity-low);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        margin: 0 auto 10px auto;
+
+        i {
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+    }
+
+    .text-area {
+        color: var(--heading-color);
+        text-transform: capitalize;
+    }
+}
+
+// Quick links responsive start
+@media (max-width: 575px) {
+    .quick-link-box {
+        .icon-area {
+            width: 35px;
+            height: 35px;
+
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// Quick links responsive end
+// Quick links section end
 /* Filter dropdown */
 .dashboard .filter {
     position: absolute;
@@ -2289,6 +2370,15 @@ hr.divider:after {
     position: relative;
 }
 
+// Template responsive strat
+@media (max-width: 991px) {
+    .template {
+        padding: 20px;
+        margin: 5px;
+    }
+}
+
+// Template responsive end
 
 /* Top Selling */
 .dashboard .top-selling {
@@ -2352,6 +2442,15 @@ hr.divider:after {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 15px;
+                .btn-area{
+                    .cmn-btn{
+                        padding: 4px 7px;
+                        i{
+                            margin-left: 5px;
+                        }
+                    }
+                    
+                }
 
                 .item {
                     &:first-child i {
@@ -2375,14 +2474,14 @@ hr.divider:after {
         }
     }
 
-    .btn-area {
+    .generate-btn-area {
         margin-top: 30px;
         display: flex;
         justify-content: center;
 
-        .cmn-btn {
-            width: 50%;
-        }
+        // .cmn-btn {
+        //     width: 50%;
+        // }
     }
 }
 
@@ -2569,6 +2668,31 @@ hr.divider:after {
 }
 
 // Ai image rtl end
+// Iamage generate modal start
+.modal{
+    background-color: rgba(228,235,248,.4784313725);
+    -webkit-backdrop-filter: blur(8.8px);
+    backdrop-filter: blur(8.8px);
+    .modal-content{
+        border: 1px solid var(--border-color1);
+    }
+}
+.image-generator-modal{
+    .template-icon-area{
+        .item{
+            i{
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+#code-generator-modal{
+    .form-control{
+        background: var(--primary-color-opacity-low);
+    }
+}
+// Iamage generate modal end
+
 // ----------------------------------------------------
 // Ai images section end
 // ----------------------------------------------------

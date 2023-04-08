@@ -269,13 +269,17 @@ $(".js-example-basic-single").select2({
     templateResult: formatState
 });
 
+$(".modal-select").select2({
+    dropdownParent: $("#formModal"),
+});
+
 
 $(document).ready(function () {
     // owl carousel dashboard card
     $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
-        margin: 20,
+        margin: 15,
         nav: false,
         dots: false,
         // rtl:true,
@@ -283,14 +287,20 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
+            576: {
                 items: 2
             },
-            991: {
-                items: 2
+            768: {
+                items: 3
             }
         }
     });
-});
 
+  
+});
+// RichTextEditor start
+var editor1cfg = {}
+editor1cfg.toolbar = "basic";
+var editor1 = new RichTextEditor("#div_editor1", editor1cfg);
+// RichTextEditor end
 
