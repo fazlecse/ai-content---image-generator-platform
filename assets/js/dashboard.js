@@ -279,7 +279,28 @@ $(document).ready(function () {
     $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
-        margin: 15,
+        margin: -20,
+        nav: false,
+        dots: false,
+        // rtl:true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            768: {
+                items: 3
+            }
+        }
+    });
+
+    // owl carousel template card
+    $('.carousel-area2').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: -25,
         nav: false,
         dots: false,
         // rtl:true,

@@ -210,8 +210,11 @@ textarea.form-control {
 }
 
 // Select2 start
-.select2-container {
+span.select2.select2-container.select2-container--default {
     width: 100% !important;
+}
+
+.select2-container {
 
     .select2-selection--single,
     .select2-selection--multiple {
@@ -221,8 +224,6 @@ textarea.form-control {
             border: 1px solid var(--primary-color);
         }
     }
-
-
 
     .select2-dropdown {
         border: 1px solid var(--border-color2);
@@ -412,13 +413,13 @@ figure {
 }
 
 .logo {
-    max-width: 50px;
-    min-width: 50px;
+    max-width: 100px;
+    min-width: 100px;
 }
 
 .footer-logo {
-    max-width: 50px;
-    min-width: 50px;
+    max-width: 100px;
+    min-width: 100px;
 }
 
 .cmn-scroll {
@@ -1154,9 +1155,9 @@ hr.divider:after {
     padding: 0;
     z-index: 9999;
 
-    .navbar-brand img {
-        max-width: 50px;
-    }
+    // .navbar-brand img {
+    //     max-width: 50px;
+    // }
 
     .navbar-toggler {
         background: var(--primary-color);
@@ -2369,12 +2370,14 @@ hr.divider:after {
         }
     }
 }
+
 // Footer responsive start
-@media (max-width: 767px){
-    .footer-area{
+@media (max-width: 767px) {
+    .footer-area {
         padding-bottom: 90px;
     }
 }
+
 // Footer responsive end
 // Footer rtl start
 .rtl .footer-area .footer-widget h5::after {

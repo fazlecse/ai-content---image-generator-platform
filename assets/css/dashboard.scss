@@ -213,8 +213,31 @@ textarea.form-control {
     background: var(--secondary-color);
 }
 
+// Cmn file input start
+.cmn-file-input {
+    position: relative;
+    height: 40px;
+
+    label {
+        font-size: 16px !important;
+        margin-bottom: 0;
+        height: 40px;
+        font-weight: 500 !important;
+    }
+    .form-control {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+// Cmn file input end
 // Select2 start
-.select2-container {
+.select2 {
     width: 100% !important;
 }
 
@@ -488,7 +511,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.5s ease-in-out;
 }
 
-/* ===========reuseble_style_start ===========*/
+/* ===========reuseblestyle_start ===========*/
 .animation1 {
     position: relative;
     animation-name: animation1;
@@ -705,6 +728,20 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
 }
 
+// Richtexteditor responsive start
+@media (max-width: 991px) {
+    .richtexteditor.rte-modern {
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .richtexteditor.rte-modern {
+        height: 300px;
+    }
+}
+
+// Richtexteditor responsive end
 
 // --------------------------------------------------------
 // rich-text-editor section end 
@@ -1253,7 +1290,7 @@ hr.divider:after {
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--heading-color);
     font-family: var(--heading-font);
@@ -1399,11 +1436,11 @@ hr.divider:after {
 }
 
 // Tab mobile view Card responsive start
-// @media (max-width: 991px) {
-//     .card-item .card {
-//         margin-right: 20px;
-//     }
-// }
+@media (max-width: 991px) {
+    .carousel-area1 .card {
+        margin-right: 32px;
+    }
+}
 
 // Tab mobile view Card responsive end
 
@@ -1444,12 +1481,23 @@ hr.divider:after {
     }
 }
 
-
+// Main responsive start
 @media (max-width: 1199px) {
     #main {
         padding: 20px;
     }
 }
+
+@media (max-width: 991px) {
+    #main {
+        .pagetitle {
+            display: none;
+        }
+    }
+}
+
+// Main responsive end
+
 
 // ---------------------------------------------------- 
 // Bottom Mobile Tab nav section start
@@ -2372,9 +2420,10 @@ hr.divider:after {
 
 // Template responsive strat
 @media (max-width: 991px) {
-    .template {
+    .carousel-area2 .template {
         padding: 20px;
         margin: 5px;
+        margin-right: 32px;
     }
 }
 
@@ -2422,9 +2471,8 @@ hr.divider:after {
     }
 
     .form-label {
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 600;
-        color: var(--heading-color);
     }
 }
 
@@ -2442,14 +2490,16 @@ hr.divider:after {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 15px;
-                .btn-area{
-                    .cmn-btn{
+
+                .btn-area {
+                    .cmn-btn {
                         padding: 4px 7px;
-                        i{
+
+                        i {
                             margin-left: 5px;
                         }
                     }
-                    
+
                 }
 
                 .item {
@@ -2485,11 +2535,11 @@ hr.divider:after {
     }
 }
 
-.section-right-card {
-    .card {
-        min-height: 700px;
-    }
-}
+// .section-right-card {
+//     .card {
+//         min-height: 700px;
+//     }
+// }
 
 .cmn-btn-group {
     .single-btn {
@@ -2669,28 +2719,38 @@ hr.divider:after {
 
 // Ai image rtl end
 // Iamage generate modal start
-.modal{
-    background-color: rgba(228,235,248,.4784313725);
+.modal {
+    background-color: rgba(228, 235, 248, .4784313725);
     -webkit-backdrop-filter: blur(8.8px);
     backdrop-filter: blur(8.8px);
-    .modal-content{
+
+    .modal-content {
         border: 1px solid var(--border-color1);
+
+        .modal-header {
+            border-bottom: 1px solid var(--border-color1);
+        }
     }
 }
-.image-generator-modal{
-    .template-icon-area{
-        .item{
-            i{
+
+.image-generator-modal {
+    .template-icon-area {
+        .item {
+            i {
                 color: var(--primary-color);
+                margin: 0 5px;
             }
         }
     }
 }
-#code-generator-modal{
-    .form-control{
+
+#code-generator-modal {
+    .form-control {
         background: var(--primary-color-opacity-low);
+        border: 1px solid var(--primary-color-opacity-low);
     }
 }
+
 // Iamage generate modal end
 
 // ----------------------------------------------------
@@ -2883,6 +2943,72 @@ hr.divider:after {
 // ----------------------------------------------------
 // Pricing section end
 // ----------------------------------------------------
+// ----------------------------------------------------
+// Pricing section start
+// ----------------------------------------------------
+.account-settings-navbar {
+    margin-bottom: 15px;
+
+    .nav {
+        .nav-link {
+            color: var(--heading-color);
+            border-radius: 8px;
+            padding: 8px 20px;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-family: var(--heading-font);
+
+            i {
+                margin-right: 5px;
+            }
+
+            &.active {
+                color: var(--white);
+                background: var(--primary-color);
+                box-shadow: var(--shadow2);
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------
+// Pricing section end
+// ----------------------------------------------------
+
+// ----------------------------------------------------
+// Account settings profile section start
+// ----------------------------------------------------
+.account-settings-profile-section {
+    .profile-details-section{
+        &:first-child{
+            border-bottom: 1px solid var(--border-color2);
+        }
+        .image-area {
+            width: 100px;
+            height: 100px;
+
+            img {
+                border-radius: 8px;
+            }
+        }
+        .btn-area{
+            .cmn-btn3{
+                height: 40px;
+                margin-left: 10px;
+            }
+            p{
+                color: var(--grayish-blue);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------
+// Account settings profile section end
+// ----------------------------------------------------
+
+
 
 // ----------------------------------------------------
 // Footer it works section start
@@ -2907,9 +3033,9 @@ hr.divider:after {
 }
 
 // Footer responsive start
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .footer {
-        padding-bottom: 60px;
+        padding-bottom: 80px;
     }
 }
 
