@@ -18,15 +18,14 @@
     --soft-blue: #5250f6;
     --magenta: #b125c0;
     --blue: #0057ff;
-    --orange: #f6b91c;
+    --orange: #ffab00;
     --bg-color1: #F9FEFF;
     --bg-color2: #F8FCFB;
-    --bg-color3: #0a1c3a;
+    --bg-color3: #fff2d6;
     --body-color: #707070;
     --border-color1: #f2f2f2;
     --border-color2: #e1e1e1;
     --border-color3: #e1f1ee;
-    --border-color4: #ccc;
     --primary-color-opacity-low: rgba(71, 190, 185, .1);
     --primary-color-opacity-low2: rgba(71, 190, 185, .2);
     --primary-color-opacity-low3: rgba(5, 160, 129, .3);
@@ -248,13 +247,14 @@ textarea.form-control {
     display: flex;
     align-items: center;
     background: var(--primary-color-opacity-low);
-    font-size: 14px;
+    font-size: 15px;
     padding: .375rem 15px;
 }
 
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding-right: 10px;
+    padding-left: 0;
 }
 
 .select2-container .select2-selection--single:focus,
@@ -601,13 +601,14 @@ body::-webkit-scrollbar-thumb {
     padding: 7px 20px;
     border-radius: 8px;
     transition: all .3s ease-in-out;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     text-transform: capitalize;
+    border: 1px solid var(--primary-color);
 
     &:hover {
         color: var(--white);
@@ -620,13 +621,14 @@ body::-webkit-scrollbar-thumb {
     padding: 7px 20px;
     border-radius: 8px;
     transition: all .3s ease-in-out;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
     text-transform: capitalize;
+    border: 1px solid var(--primary-color);
 
     &:hover {
         color: var(--white);
@@ -639,12 +641,12 @@ body::-webkit-scrollbar-thumb {
     padding: 7px 20px;
     border-radius: 8px;
     transition: var(--transition);
-    font-size: 18px;
+    font-size: 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 
     &:hover {
         color: var(--white);
@@ -2473,6 +2475,7 @@ hr.divider:after {
     .form-label {
         font-size: 14px;
         font-weight: 600;
+        text-transform: capitalize;
     }
 }
 
@@ -2641,7 +2644,7 @@ hr.divider:after {
     }
 
     table {
-        font-size: 14px;
+        font-size: 15px;
         color: var(--grayish-blue);
 
         thead {
@@ -2980,9 +2983,7 @@ hr.divider:after {
 // ----------------------------------------------------
 .account-settings-profile-section {
     .profile-details-section{
-        &:first-child{
-            border-bottom: 1px solid var(--border-color2);
-        }
+        margin-top: 20px;
         .image-area {
             width: 100px;
             height: 100px;
@@ -2992,18 +2993,71 @@ hr.divider:after {
             }
         }
         .btn-area{
-            .cmn-btn3{
-                height: 40px;
-                margin-left: 10px;
+            .btn-area-inner{
+                margin-bottom: 20px;
+                display: flex;
+                .cmn-btn3{
+                    height: 40px;
+                    margin-left: 10px;
+                }
+                p{
+                    color: var(--grayish-blue);
+                    margin-top: 20px;
+                }
             }
-            p{
-                color: var(--grayish-blue);
-                margin-top: 20px;
+            
+        }
+    }
+    .profile-form-section{
+        padding-top: 20px;
+        .btn-area{
+            margin-top: 20px;
+            .cmn-btn{
+                margin-right: 10px;
             }
         }
     }
 }
-
+.delete-account-info{
+    margin-top: 20px;
+    .alart-warning{
+        color: var(--orange);
+        padding: 20px;
+        background: var(--bg-color3);
+        border-radius: 5px;
+        h6,p{
+            color: var(--orange);
+            margin-bottom: 5px;
+        }
+    }
+    .btn-area{
+        margin-top: 20px;
+    }
+}
+// Account settings profile responsive section start
+@media (max-width: 575px){
+    .account-settings-profile-section{
+        .profile-details-section {
+            .btn-area{
+                p{
+                    font-size: 14px;
+                }
+                .btn-area-inner{
+                    flex-direction: column;
+                    gap: 10px;
+                    .cmn-btn3{
+                        margin-left: initial;
+                    }
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    } 
+    .account-settings-navbar .nav .nav-item{
+        width: 100%;
+    } 
+}
+// Account settings profile responsive section end
 // ----------------------------------------------------
 // Account settings profile section end
 // ----------------------------------------------------

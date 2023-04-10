@@ -398,49 +398,165 @@
                 <div class="account-settings-navbar">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i
+                            <a class="nav-link" aria-current="page" href="account-settings-profile.html"><i
                                     class="fa-regular fa-user"></i>profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-regular fa-bell"></i>Notification</a>
+                            <a class="nav-link active" href="#"><i class="fa-regular fa-bell"></i>Notification</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-regular fa-link"></i>Connection</a>
+                            <a class="nav-link" href="account-settings-identity-verification.html"><i class="fa-regular fa-link"></i> Identity Verification</a>
                         </li>
                     </ul>
                 </div>
                 <!-- Account settings navbar end -->
-                <div class="account-settings-profile-section">
-                    <div class="card">
-                        <div class="card-header border-0">
-                            <h5 class="card-title">Profile Details
-                            </h5>
-                        </div>
-                        <div class="profile-details-section">
+                
+                <form action="">
+                    <div class="account-settings-profile-section">
+                        <div class="card">
+                            <div class="card-header border-0">
+                                <h5 class="card-title">Recent Devices</h5>
+                            </div>
                             <div class="card-body pt-0">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <div class="image-area">
-                                        <img src="assets/images/user_panel/profile/1.png" alt="">
-                                    </div>
-                                    <div class="btn-area">
-                                        <div class="btn-area-inner d-flex">
-                                            <div class="cmn-file-input">
-                                                <label for="formFile" class="form-label cmn-btn">Upload New Photo</label>
-                                                <input class="form-control" type="file" id="formFile">
-                                              </div>
-                                            <button type="button" class="cmn-btn3">reset</button>
-                                        </div>
-                                        <p>Allowed JPG, GIF or PNG. Max size of 800K</p>
+                                <p>We need permission from your browser to show notifications. <strong>Request
+                                        Permission</strong>
+                                </p>
+                                <!-- Cmn table start -->
+                                <div class="cmn-table mt-20">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 15%;" scope="col">Type</th>
+                                                    <th style="width: 5%;" scope="col">✉️ Email</th>
+                                                    <th style="width: 5%;" scope="col">🖥 Browser</th>
+                                                    <th style="width: 3%;" scope="col">👩🏻‍💻 App</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Type" scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>New for you</span>
+                                                        </div>
+
+                                                    </td>
+                                                    <td data-label="✉️ Email">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="🖥 Browser">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="👩🏻‍💻 App">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Type" scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Account activity
+                                                            </span>
+                                                        </div>
+
+                                                    </td>
+                                                    <td data-label="✉️ Email">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="🖥 Browser">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="👩🏻‍💻 App">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Type" scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>A new browser used to sign in</span>
+                                                        </div>
+
+                                                    </td>
+                                                    <td data-label="✉️ Email">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="🖥 Browser">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="👩🏻‍💻 App">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Type" scope="row">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>A new device is linked</span>
+                                                        </div>
+
+                                                    </td>
+                                                    <td data-label="✉️ Email">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked" checked>
+                                                        </div>
+                                                    </td>
+                                                    <td data-label="🖥 Browser">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked">
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="👩🏻‍💻 App">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                role="switch" id="flexSwitchCheckChecked">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
+                                <!-- Cmn table end -->
                             </div>
-                        </div>
-                        <div class="card-body">
-                            
+
                         </div>
                     </div>
+                </form>
 
-                </div><!-- End Templates -->
             </div>
         </div>
 

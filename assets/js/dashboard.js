@@ -249,11 +249,15 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 
-// cmn-select2-dropdown template-view
+// cmn-select2
 $(document).ready(function () {
     $('.cmn-select2-dropdown').select2();
 });
+$(".modal-select").select2({
+    dropdownParent: $("#formModal"),
+});
 
+// select2 with image
 function formatState(state) {
     if (!state.id) {
         return state.text;
@@ -269,9 +273,8 @@ $(".js-example-basic-single").select2({
     templateResult: formatState
 });
 
-$(".modal-select").select2({
-    dropdownParent: $("#formModal"),
-});
+
+
 
 
 $(document).ready(function () {
@@ -317,7 +320,7 @@ $(document).ready(function () {
         }
     });
 
-  
+
 });
 // RichTextEditor start
 var editor1cfg = {}
