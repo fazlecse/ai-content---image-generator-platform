@@ -673,6 +673,80 @@ body::-webkit-scrollbar-thumb {
         color: var(--white);
     }
 }
+// --------------------------------------------------------
+//  Alerts section start 
+// --------------------------------------------------------
+.alert{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border-left: 15px solid;
+    box-shadow: 0px 3px 3px #BABABA;
+    .icon-area{
+        i{
+            font-size: 30px;
+            margin-right: 15px;
+        }
+    }
+    .title{
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .title, .description{
+        color: var(--heading-color);
+    }
+}
+.alert-dismissible{
+    .btn-close {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        z-index: 2;
+        transform: translateY(-50%);
+        padding: 0;
+        background: none;
+        height: initial;
+        width: initial;
+        i{
+            font-size: 24px;
+        }
+    }
+} 
+.alert-success{
+    color: #3AC279;
+    background: #C5F7DC;
+    border-color: #C5F7DC;
+    border-left-color: #3ac279;
+    .btn-close{
+        color: #3AC279;
+    }
+}
+.alert-danger{
+    color: #E9594C;
+    background: #FFCFCB;
+    border-color: #FFCFCB;
+    border-left-color: #E9594C;
+    .btn-close{
+        color: #E9594C;
+    }
+}
+.alert-warning{
+    color: #E89F29;
+    background: #FFE8C3;
+    border-color: #FFE8C3;
+    border-left-color: #E89F29;
+    .btn-close{
+        color: #E89F29;
+    }
+}
+// --------------------------------------------------------
+//  Alerts section end
+// --------------------------------------------------------
 
 // --------------------------------------------------------
 // -- Cmn tab section start --

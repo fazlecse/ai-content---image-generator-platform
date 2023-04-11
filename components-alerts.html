@@ -301,7 +301,6 @@
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
-
             <li class="nav-item">
                 <div class="upgrade-btn-area">
                     <div class="remaining"> <span>0</span> words left</div>
@@ -336,7 +335,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="user-panel-all-images.html">
+                        <a href="forms-layouts.html">
                             <i class="fa-regular fa-circle"></i><span>All Images</span>
                         </a>
                     </li>
@@ -346,12 +345,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="user-panel-workbooks.html">
+                        <a href="forms-validation.html">
                             <i class="fa-regular fa-circle"></i><span>Workbooks</span>
                         </a>
                     </li>
                     <li>
-                        <a href="user-panel-ai-image.html">
+                        <a href="forms-validation.html">
                             <i class="fa-regular fa-circle"></i><span>AI Images</span>
                         </a>
                     </li>
@@ -359,7 +358,7 @@
             </li><!-- End Documents Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="user-panel-ai-image.html">
+                <a class="nav-link collapsed" href="users-profile.html">
                     <i class="fa-regular fa-image"></i>
                     <span>AI Images</span>
                 </a>
@@ -379,180 +378,84 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h3>Profile</h3>
+            <h3>Alerts</h3>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="user-panel.html">Home</a></li>
-                    <li class="breadcrumb-item"><a>Account Settings</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a>Components</a></li>
+                    <li class="breadcrumb-item active">Alerts</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
 
         <div class="section dashboard">
-            <!-- Left side columns -->
-            <!-- Tab mobile view carousel start -->
-
             <div class="row">
-                <!-- Account-settings -->
-                <!-- Account settings navbar start -->
-                <div class="account-settings-navbar">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="account-settings-profile.html"><i
-                                    class="fa-regular fa-user"></i>profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-settings-notifications.html"><i
-                                    class="fa-regular fa-bell"></i>Notification</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="account-settings-identity-verification.html"><i class="fa-regular fa-link"></i> Identity Verification</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Account settings navbar end -->
-                <form action="">
-                    <div class="account-settings-profile-section">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">Profile Details
-                                </h5>
-                                <div class="profile-details-section">
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <div class="image-area">
-                                            <img src="assets/images/user_panel/profile/1.png" alt="">
-                                        </div>
-                                        <div class="btn-area">
-                                            <div class="btn-area-inner d-flex">
-                                                <div class="cmn-file-input">
-                                                    <label for="formFile" class="form-label cmn-btn">Upload New
-                                                        Photo</label>
-                                                    <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                                <button type="button" class="cmn-btn3">reset</button>
+
+                <!-- Left side columns -->
+                <div class="col-lg-12">
+                    <div class="row g-4">
+                        <!-- Alert section start -->
+                        <div class="col-12">
+                            <div class="card alerts overflow-auto">
+                                <div class="card-header">
+                                    <h5 class="card-title">Alerts</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div>
+                                        <div class="alert alert-success alert-dismissible" role="alert">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-shield-check"></i>
                                             </div>
-                                            <p>Allowed JPG, GIF or PNG. Max size of 800K</p>
+                                            <div class="text-area">
+                                                <div class="title">success</div>
+                                                <div class="description">Nice, you triggered this alert message!
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Close"><i class="fa-regular fa-xmark"></i></button>
                                         </div>
+                                        <div class="alert alert-danger alert-dismissible" role="alert">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-circle-exclamation"></i>
+                                            </div>
+                                            <div class="text-area">
+                                                <div class="title">error</div>
+                                                <div class="description">Nice, you triggered this alert message!
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Close"><i class="fa-regular fa-xmark"></i></button>
+                                        </div>
+                                        <div class="alert alert-warning alert-dismissible" role="alert">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-triangle-exclamation"></i>
+                                            </div>
+                                            <div class="text-area">
+                                                <div class="title">warning</div>
+                                                <div class="description">Nice, you triggered this alert message!
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Close"><i class="fa-regular fa-xmark"></i></button>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body pt-0">
-
-                                <div class="profile-form-section">
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label for="firstname" class="form-label">First Name</label>
-                                            <input type="text" class="form-control" id="firstname">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="lastname" class="form-label">last name</label>
-                                            <input type="text" class="form-control" id="lastname">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="e-mail" class="form-label">e-mail</label>
-                                            <input type="email" class="form-control" id="e-mail">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="organization" class="form-label">organization</label>
-                                            <input type="text" class="form-control" id="organization">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="phonenumber" class="form-label">phone number</label>
-                                            <input type="text" class="form-control" id="phonenumber"
-                                                onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="address" class="form-label">address</label>
-                                            <input type="text" class="form-control" id="address">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="state" class="form-label">state</label>
-                                            <input type="text" class="form-control" id="state">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="zipcode" class="form-label">zip code</label>
-                                            <input type="text" class="form-control" id="zipcode">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="inputAddress" class="form-label">country</label>
-                                            <select class="cmn-select2-dropdown" name="state">
-                                                <option value="AL">Select</option>
-                                                <option value="AL">Bangladesh</option>
-                                                <option value="WY">Australia</option>
-                                                <option value="WY">Belarus</option>
-                                                <option value="WY">Canada</option>
-                                                <option value="WY">China</option>
-                                                <option value="WY">France</option>
-                                                <option value="WY">Germany</option>
-                                                <option value="WY">India</option>
-                                                <option value="WY">Indonesia</option>
-                                                <option value="WY">Italy</option>
-                                                <option value="WY">Japan</option>
-                                                <option value="WY">Korea</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="inputAddress" class="form-label">language</label>
-                                            <select class="cmn-select2-dropdown" name="state">
-                                                <option value="AL">Select Language</option>
-                                                <option value="AL">Bangla</option>
-                                                <option value="WY">English</option>
-                                                <option value="WY">French</option>
-                                                <option value="WY">German</option>
-                                                <option value="WY">China</option>
-                                                <option value="WY">France</option>
-                                                <option value="WY">Germany</option>
-                                                <option value="WY">India</option>
-                                                <option value="WY">Indonesia</option>
-                                                <option value="WY">Italy</option>
-                                                <option value="WY">Japan</option>
-                                                <option value="WY">Korea</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="inputAddress" class="form-label">Time zone</label>
-                                            <select class="cmn-select2-dropdown" name="state">
-                                                <option value="AL">Select Timezone</option>
-                                                <option value="WY">(GMT-12:00) International Date Line West</option>
-                                                <option value="WY">(GMT-11:00) Midway Island, Samoa</option>
-                                                <option value="WY">(GMT-10:00) Hawaii</option>
-                                                <option value="WY">(GMT-09:00) Alaska</option>
-                                                <option value="WY">(GMT-08:00) Pacific Time (US & Canada)</option>
-                                                <option value="WY">(GMT-08:00) Tijuana, Baja California</option>
-                                                <option value="WY">(GMT-07:00) Arizona</option>
-                                                <option value="WY">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                                                <option value="WY">(GMT-07:00) Mountain Time (US & Canada)</option>
-                                                <option value="WY">(GMT-06:00) Central America</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="inputAddress" class="form-label">currency</label>
-                                            <select class="cmn-select2-dropdown" name="state">
-                                                <option value="AL">Select Currency</option>
-                                                <option value="WY">BDT</option>
-                                                <option value="WY">USD</option>
-                                                <option value="WY">Euro</option>
-                                                <option value="WY">Pound</option>
-                                                <option value="WY">bitcoin</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="btn-area d-flex g-3">
-                                        <button type="button" class="cmn-btn">save changes</button>
-                                        <button type="button" class="cmn-btn3">cancel</button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                        </div><!-- Alert section end -->
                     </div>
-                </form>
+                </div><!-- End Left side columns -->
 
             </div>
         </div>
 
     </main><!-- End #main -->
+
+
+
+
+
+
 
     <!-------------------------------------------------------->
     <!-- Footer section start -->
@@ -580,18 +483,11 @@
 
 
 
-
-
-
     <!-- Jquery Js link -->
     <script src="assets/js/jquery-3.6.1.min.js"></script>
 
     <!-- Bootstrap Js link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/select2.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/owl.carousel.min.js"></script>
 
 
     <!-- Main Js slink -->

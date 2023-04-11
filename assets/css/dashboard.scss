@@ -223,6 +223,7 @@ textarea.form-control {
         height: 40px;
         font-weight: 500 !important;
     }
+
     .form-control {
         cursor: pointer;
         position: absolute;
@@ -235,7 +236,10 @@ textarea.form-control {
 }
 
 // Cmn file input end
+
+// --------------------------------------------------------
 // Select2 start
+// --------------------------------------------------------
 .select2 {
     width: 100% !important;
 }
@@ -334,7 +338,15 @@ textarea.form-control {
     justify-content: end;
 }
 
+// Select2 rtl start
+.rtl .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: 0;
+}
+
+// Select2 rtl end
+// --------------------------------------------------------
 // Select2 end
+// --------------------------------------------------------
 // Breadcrumb start
 .breadcrumb {
     display: flex;
@@ -628,7 +640,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     font-weight: 500;
     text-transform: capitalize;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--heading-color);
 
     &:hover {
         color: var(--white);
@@ -717,6 +729,158 @@ body::-webkit-scrollbar-thumb {
 
 // --------------------------------------------------------
 // -- Cmn tab section end --
+// --------------------------------------------------------
+
+// --------------------------------------------------------
+//  Alerts section start 
+// --------------------------------------------------------
+.alert {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 2px solid;
+    border-left: 15px solid;
+
+    // box-shadow: 0px 3px 3px #BABABA;
+    .icon-area {
+        i {
+            font-size: 30px;
+            margin-right: 15px;
+        }
+    }
+
+    .title {
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .title,
+    .description {
+        color: var(--heading-color);
+    }
+}
+
+.alert-dismissible {
+    .btn-close {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        z-index: 2;
+        transform: translateY(-50%);
+        padding: 0;
+        background: none;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 24px;
+        }
+    }
+}
+
+.alert-success {
+    color: #3AC279;
+    background: var(--white);
+    border-color: #C5F7DC;
+    border-left-color: #3ac279;
+
+    .btn-close {
+        color: #3AC279;
+    }
+}
+
+.alert-danger {
+    color: #E9594C;
+    background: var(--white);
+    border-color: #FFCFCB;
+    border-left-color: #E9594C;
+
+    .btn-close {
+        color: #E9594C;
+    }
+}
+
+.alert-warning {
+    color: #E89F29;
+    background: var(--white);
+    border-color: #FFE8C3;
+    border-left-color: #E89F29;
+
+    .btn-close {
+        color: #E89F29;
+    }
+}
+
+// Aler responsive start
+@media (max-width: 575px) {
+    .alert {
+        padding: 10px 30px 10px 15px;
+    }
+    .alert-dismissible .btn-close{
+        right: 15px;
+    }
+}
+
+// Alert responsive end
+// Alerts rtl start
+.rtl {
+    .alert {
+        border-right: 15px solid;
+        border-left: 2px solid;
+
+        .icon-area {
+            i {
+                margin-right: 0;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .alert-dismissible .btn-close {
+        left: 30px;
+        right: auto;
+    }
+
+
+    .alert-success {
+        border-right-color: #3ac279;
+        border-left-color: #C5F7DC;
+    }
+
+    .alert-danger {
+        border-right-color: #E9594C;
+        border-left-color: #FFCFCB;
+    }
+
+    .alert-warning {
+        border-right-color: #E89F29;
+        border-left-color: #FFE8C3;
+    }
+}
+@media (max-width: 575px){
+    .rtl {
+        .alert{
+            padding: 10px 15px 10px 30px;
+        }
+        .alert-dismissible .btn-close {
+            left: 15px;
+        }
+    
+    }
+}
+
+// Alerts rtl end
+// --------------------------------------------------------
+//  Alerts section end
 // --------------------------------------------------------
 
 
@@ -2982,8 +3146,9 @@ hr.divider:after {
 // Account settings profile section start
 // ----------------------------------------------------
 .account-settings-profile-section {
-    .profile-details-section{
+    .profile-details-section {
         margin-top: 20px;
+
         .image-area {
             width: 100px;
             height: 100px;
@@ -2992,72 +3157,116 @@ hr.divider:after {
                 border-radius: 8px;
             }
         }
-        .btn-area{
-            .btn-area-inner{
+
+        .btn-area {
+            p {
+                margin-bottom: 0;
+            }
+
+            .btn-area-inner {
                 margin-bottom: 20px;
                 display: flex;
-                .cmn-btn3{
+
+                .cmn-btn3 {
                     height: 40px;
                     margin-left: 10px;
                 }
-                p{
+
+                p {
                     color: var(--grayish-blue);
                     margin-top: 20px;
                 }
             }
-            
+
         }
     }
-    .profile-form-section{
+
+    .profile-form-section {
         padding-top: 20px;
-        .btn-area{
+
+        .btn-area {
             margin-top: 20px;
-            .cmn-btn{
+
+            .cmn-btn {
                 margin-right: 10px;
             }
         }
     }
 }
-.delete-account-info{
+
+.delete-account-info {
     margin-top: 20px;
-    .alart-warning{
+
+    .alart-warning {
         color: var(--orange);
         padding: 20px;
         background: var(--bg-color3);
         border-radius: 5px;
-        h6,p{
+
+        h6,
+        p {
             color: var(--orange);
             margin-bottom: 5px;
         }
     }
-    .btn-area{
+
+    .btn-area {
         margin-top: 20px;
     }
 }
+
 // Account settings profile responsive section start
-@media (max-width: 575px){
-    .account-settings-profile-section{
+@media (max-width: 575px) {
+    .account-settings-profile-section {
         .profile-details-section {
-            .btn-area{
-                p{
+            .btn-area {
+                p {
                     font-size: 14px;
                 }
-                .btn-area-inner{
+
+                .btn-area-inner {
                     flex-direction: column;
                     gap: 10px;
-                    .cmn-btn3{
+
+                    .cmn-btn3 {
                         margin-left: initial;
                     }
+
                     margin-bottom: 5px;
                 }
             }
         }
-    } 
-    .account-settings-navbar .nav .nav-item{
+    }
+
+    .account-settings-navbar .nav .nav-item {
         width: 100%;
-    } 
+    }
 }
+
 // Account settings profile responsive section end
+// Account settings profile rtl start
+.rtl .account-settings-navbar .nav .nav-link i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.rtl .account-settings-profile-section .profile-details-section .btn-area .btn-area-inner .cmn-btn3 {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.rtl .account-settings-profile-section .profile-form-section .btn-area .cmn-btn {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+@media (max-width: 575px) {
+    .rtl .account-settings-profile-section .profile-details-section .btn-area .btn-area-inner .cmn-btn3 {
+        margin-right: initial;
+    }
+}
+
+// Account settings profile rtl end
 // ----------------------------------------------------
 // Account settings profile section end
 // ----------------------------------------------------
