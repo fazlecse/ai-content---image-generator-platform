@@ -317,9 +317,9 @@
 
             <li class="nav-item">
                 <div class="upgrade-btn-area">
-                    <div class="remaining"> <span>0</span> words left</div>
+
                     <a href="user-panel-pricing.html" class="btn cmn-btn2"><i class="fa-regular fa-bolt"></i>
-                        upgrade</a>
+                        Upgraded to Pro</a>
                 </div>
             </li><!-- End Pricing Nav -->
 
@@ -331,11 +331,11 @@
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="templates.html">
+                <a class="nav-link collapsed" href="topics.html">
                     <i class="fa-regular fa-microchip-ai"></i>
-                    <span>Templates</span>
+                    <span>topics</span>
                 </a>
-            </li><!-- End Templates Page Nav -->
+            </li><!-- End topics Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
@@ -445,13 +445,13 @@
                         <div class="col-lg-4">
                             <div class="section-left-card">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-header">
                                         <div class="template-view">
                                             <div class="templete-title-area">
                                                 <div class="template-icon-area">
                                                     <div class="item item1">
-                                                        <i class="fa-regular fa-message-captions"></i> <span
-                                                            class="template-title">Blog Section</span>
+                                                        <i class="fa-regular fa-message-code"></i> <span
+                                                            class="template-title">AI Code Generate</span>
                                                     </div>
                                                     <div class="btn-area d-lg-none">
                                                         <button type="button" class="cmn-btn" data-bs-toggle="modal"
@@ -460,17 +460,21 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="template-view-info">Nobody wants to read boring blog titles,
-                                                generate
-                                                catchy
-                                                blog titles with this tool</div>
                                         </div>
+                                    </div>
+                                    <div class="card-body">
                                         <div class="col-12 d-none d-lg-block">
                                             <div class="row g-3">
-                                                <div class="col-sm-12">
-                                                    <label class="mt-3"></label>
-                                                    <input type="text" class="form-control" id="inputEmail4"
-                                                        placeholder="Your Balance is 0 Words" disabled>
+                                                <div class="col-12">
+                                                    <div class="notification">
+                                                        Use this code generator to create code in any programming
+                                                        language.
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="Title" class="form-label">Title<span
+                                                            class="highlight">*</span></label>
+                                                    <input class="form-control" id="Title" value="Title here">
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="inputAddress" class="form-label">Language</label>
@@ -488,7 +492,7 @@
 
                                                 </div>
                                                 <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Creativity</label>
+                                                    <label for="inputAddress" class="form-label">Quality type</label>
                                                     <select class="cmn-select2-dropdown" name="state">
                                                         <option value="AL">Low</option>
                                                         <option value="WY">Average</option>
@@ -513,7 +517,8 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="btn-area">
-                                                        <button type="submit" class="cmn-btn">generate text</button>
+                                                        <button type="submit" class="cmn-btn">generate text <i
+                                                                class="fa-regular fa-angle-right"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -526,14 +531,67 @@
                         <div class="col-lg-8">
                             <div class="section-right-card">
                                 <div class="card">
+                                    <div class="card-header">
+                                        <div class="row g-4">
+                                            <div class="col-sm-6">
+                                                <div class="template-view">
+                                                    <div class="templete-title-area">
+                                                        <div class="template-icon-area">
+                                                            <div class="item item1">
+                                                                <i class="fa-regular fa-ballot-check"></i> <span class="template-title">Generated Result</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="cmn-btn-group d-flex justify-content-sm-end ">
+                                                    <button type="button" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top"
+                                                        data-bs-title="Export as Word Document"
+                                                        class="single-btn"><i
+                                                            class="fa-sharp fa-regular fa-file-word"></i></button>
+
+                                                    <button type="button" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top"
+                                                        data-bs-title="Export as PDF Document" class="single-btn"><i
+                                                            class="fa-regular fa-file-pdf"></i></button>
+
+                                                    <button type="button" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top"
+                                                        data-bs-title="Export as Text Document"
+                                                        class="single-btn"><i
+                                                            class="fa-sharp fa-regular fa-file-invoice"></i></button>
+
+                                                    <button type="button" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" data-bs-title="Copy Text"
+                                                        class="single-btn"><i
+                                                            class="fa-regular fa-copy"></i></button>
+
+                                                    <button type="button" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" data-bs-title="Save Document"
+                                                        class="single-btn"><i
+                                                            class="fa-regular fa-print active"></i></button>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                                                                
+                                    </div>
                                     <div class="card-body">
                                         <div class="card-body-top">
                                             <div class="row g-4">
-                                                <div class="col-md-4 col-sm-6">
-                                                    <input type="text" class="form-control" id="inputCity"
-                                                        value="New Document">
+                                                <div class="col-sm-6">
+                                                    <div class="input-box">
+                                                        <input type="text" class="form-control" id="inputCity"
+                                                            value="New Code">
+                                                        <button type="button" class="single-btn"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                                            data-bs-title="Save Document"><i
+                                                                class="fa-regular fa-floppy-disk"></i></button>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-4 col-sm-6">
+                                                <div class="col-sm-6">
                                                     <select class="cmn-select2-dropdown" name="state">
                                                         <option value="AL">Select Workbook Name</option>
                                                         <option value="WY"> DADA</option>
@@ -542,36 +600,7 @@
                                                         <option value="WY">Forla</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-4 col-sm-6">
-                                                    <div class="cmn-btn-group">
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-title="Export as Word Document"
-                                                            class="single-btn"><i
-                                                                class="fa-sharp fa-regular fa-file-word"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-title="Export as PDF Document" class="single-btn"><i
-                                                                class="fa-regular fa-file-pdf"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top"
-                                                            data-bs-title="Export as Text Document"
-                                                            class="single-btn"><i
-                                                                class="fa-sharp fa-regular fa-file-invoice"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" data-bs-title="Copy Text"
-                                                            class="single-btn"><i
-                                                                class="fa-regular fa-copy"></i></button>
-
-                                                        <button type="button" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" data-bs-title="Save Document"
-                                                            class="single-btn"><i
-                                                                class="fa-regular fa-print active"></i></button>
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <div class="row">
@@ -643,10 +672,15 @@
 
                     <div class="col-12">
                         <div class="row g-3">
-                            <div class="col-sm-12">
-                                <label class="mt-3"></label>
-                                <input type="text" class="form-control" id="inputEmail4"
-                                    placeholder="Your Balance is 0 Words" disabled>
+                            <div class="col-12">
+                                <div class="notification">
+                                    Use this code generator to create code in any programming
+                                    language.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="Title" class="form-label">Title<span class="highlight">*</span></label>
+                                <input class="form-control" id="Title" value="Title here">
                             </div>
                             <div class="col-12">
                                 <label for="inputAddress" class="form-label">Language</label>
@@ -664,7 +698,7 @@
 
                             </div>
                             <div class="col-12">
-                                <label for="inputAddress" class="form-label">Creativity</label>
+                                <label for="inputAddress" class="form-label">Quality type</label>
                                 <select class="modal-select" name="state">
                                     <option value="AL">Low</option>
                                     <option value="WY">Average</option>
@@ -689,7 +723,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="generate-btn-area">
-                                    <button type="submit" class="cmn-btn">generate image</button>
+                                    <button type="submit" class="cmn-btn">generate image <i class="fa-regular fa-angle-right"></i></button>
                                 </div>
                             </div>
                         </div>
