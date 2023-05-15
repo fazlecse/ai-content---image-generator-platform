@@ -312,17 +312,31 @@
     <!-- Sidebar section start -->
     <!-------------------------------------------------------->
     <aside id="sidebar" class="sidebar">
-
-        <ul class="sidebar-nav" id="sidebar-nav">
-
-            <li class="nav-item">
-                <div class="upgrade-btn-area">
-
-                    <a href="user-panel-pricing.html" class="btn cmn-btn2"><i class="fa-regular fa-bolt"></i>
-                        Upgraded to Pro</a>
+        <div class="progress-area">
+            <div class="progress-header">
+                <div class="icon-box">
+                    <i class="fa-regular fa-gift"></i>
                 </div>
-            </li><!-- End Pricing Nav -->
-
+                <div class="title">
+                    <h4 class="">Standerd</h4>
+                </div>
+            </div>
+            <div class="content-area">
+                <div class="item item1">
+                    <h5 class="mb-0">3,092</h5>
+                    <span>Word left</span>
+                </div>
+                <div class="item item2">
+                    <h5 class="mb-0">1,124</h5>
+                    <span>Image left</span>
+                </div>
+            </div>
+            <div class="upgrade-btn-area">
+                <a href="user-panel-pricing.html" class="btn cmn-btn2"><i class="fa-regular fa-bolt"></i>
+                    Upgraded to Pro</a>
+            </div>
+        </div>
+        <ul class="sidebar-nav" id="sidebar-nav">
             <li class="nav-item">
                 <a class="nav-link active" href="user-panel.html">
                     <i class="fa-regular fa-grid"></i>
@@ -538,7 +552,8 @@
                                                     <div class="templete-title-area">
                                                         <div class="template-icon-area">
                                                             <div class="item item1">
-                                                                <i class="fa-regular fa-ballot-check"></i> <span class="template-title">Generated Result</span>
+                                                                <i class="fa-regular fa-ballot-check"></i> <span
+                                                                    class="template-title">Generated Result</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -547,26 +562,23 @@
                                             <div class="col-sm-6">
                                                 <div class="cmn-btn-group d-flex justify-content-sm-end ">
                                                     <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="Export as Word Document"
+                                                        data-bs-placement="top" data-bs-title="Export as Word Document"
                                                         class="single-btn"><i
                                                             class="fa-sharp fa-regular fa-file-word"></i></button>
 
                                                     <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="Export as PDF Document" class="single-btn"><i
+                                                        data-bs-placement="top" data-bs-title="Export as PDF Document"
+                                                        class="single-btn"><i
                                                             class="fa-regular fa-file-pdf"></i></button>
 
                                                     <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="Export as Text Document"
+                                                        data-bs-placement="top" data-bs-title="Export as Text Document"
                                                         class="single-btn"><i
                                                             class="fa-sharp fa-regular fa-file-invoice"></i></button>
 
                                                     <button type="button" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" data-bs-title="Copy Text"
-                                                        class="single-btn"><i
-                                                            class="fa-regular fa-copy"></i></button>
+                                                        class="single-btn"><i class="fa-regular fa-copy"></i></button>
 
                                                     <button type="button" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" data-bs-title="Save Document"
@@ -574,13 +586,22 @@
                                                             class="fa-regular fa-print active"></i></button>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
-                                                                                
+
                                     </div>
                                     <div class="card-body">
                                         <div class="card-body-top">
                                             <div class="row g-4">
+                                                <div class="col-sm-6">
+                                                    <select class="cmn-select2-dropdown" name="state">
+                                                        <option value="AL">Select Workbook Name</option>
+                                                        <option value="WY"> DADA</option>
+                                                        <option value="WY">TRST</option>
+                                                        <option value="WY">Aaaa</option>
+                                                        <option value="WY">Forla</option>
+                                                    </select>
+                                                </div>
                                                 <div class="col-sm-6">
                                                     <div class="input-box">
                                                         <input type="text" class="form-control" id="inputCity"
@@ -591,16 +612,6 @@
                                                                 class="fa-regular fa-floppy-disk"></i></button>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-6">
-                                                    <select class="cmn-select2-dropdown" name="state">
-                                                        <option value="AL">Select Workbook Name</option>
-                                                        <option value="WY"> DADA</option>
-                                                        <option value="WY">TRST</option>
-                                                        <option value="WY">Aaaa</option>
-                                                        <option value="WY">Forla</option>
-                                                    </select>
-                                                </div>
-                                                
                                             </div>
                                         </div>
                                         <div class="row">
@@ -723,7 +734,8 @@
                             </div>
                             <div class="col-12">
                                 <div class="generate-btn-area">
-                                    <button type="submit" class="cmn-btn">generate image <i class="fa-regular fa-angle-right"></i></button>
+                                    <button type="submit" class="cmn-btn">generate image <i
+                                            class="fa-regular fa-angle-right"></i></button>
                                 </div>
                             </div>
                         </div>

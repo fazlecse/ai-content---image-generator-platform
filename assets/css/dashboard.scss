@@ -490,6 +490,7 @@ figure {
 :hover::-webkit-scrollbar-thumb {
     visibility: visible;
     opacity: 1;
+    
 }
 
 body::-webkit-scrollbar {
@@ -607,10 +608,12 @@ body::-webkit-scrollbar-thumb {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+// --------------------------------------------------------
+// Cmn btn start
+// --------------------------------------------------------
 .cmn-btn {
     background: var(--btn-bg1);
-    padding: 7px 20px;
+    padding: 7px 15px;
     border-radius: 8px;
     transition: all .3s ease-in-out;
     font-size: 16px;
@@ -622,7 +625,16 @@ body::-webkit-scrollbar-thumb {
     text-transform: capitalize;
     border: 1px solid var(--primary-color);
     i{
-        margin: 0 5px;
+        margin-left: 10px;
+        background-color: var(--white);
+        width: 20px;
+        height: 20px;
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 12px;
     }
 
     &:hover {
@@ -630,10 +642,24 @@ body::-webkit-scrollbar-thumb {
         background: var(--btn-bg2);
     }
 }
+// Rtl cmn btn start
+.rtl{
+    .cmn-btn{
+        i{
+            margin-left: 0;
+            margin-right: 10px;
+            transform: rotate(180deg);
+        }
+    }
+}
+// Rtl cmn btn end
+// --------------------------------------------------------
+// Cmn btn end
+// --------------------------------------------------------
 
 .cmn-btn2 {
     background: var(--btn-bg3);
-    padding: 7px 20px;
+    padding: 7px 10px;
     border-radius: 8px;
     transition: all .3s ease-in-out;
     font-size: 16px;
@@ -1695,8 +1721,8 @@ hr.divider:after {
     background: var(--white);
     justify-content: space-around;
     box-shadow: var(--shadow3);
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     height: 55px;
     display: flex;
     align-items: center;
@@ -2138,25 +2164,52 @@ hr.divider:after {
     padding: 0;
     margin: 0;
     list-style: none;
+    overflow-y: auto;
+    height: 550px;
+    padding-right: 5px;
 }
-
-.sidebar-nav .upgrade-btn-area {
-    margin: 20px 0;
-}
-.sidebar-nav .upgrade-btn-area {
-    margin: 20px 0;
-}
-.sidebar-nav .upgrade-btn-area .cmn-btn2{
-    padding: 10px 15px;
-    text-transform: none;
-}
-
-
-.sidebar-nav .upgrade-btn-area .cmn-btn2 i {
-    color: var(--primary-color);
-    margin-right: 5px;
-}
-
+.sidebar{
+    .progress-area{
+        margin-bottom: 20px;
+        background-color: var(--bg-color1);
+        padding: 15px;
+        box-shadow: var(--shadow3);
+        border-radius: 10px;
+        border: 1px solid var(--border-color3);
+        text-align: center;
+        .progress-header{
+            .title{
+                margin-top: 10px;
+            }
+        }
+        .icon-box{
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: var(--bg-color3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            margin: 0 auto;
+            font-size: 22px;
+        }
+        .content-area{
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+    }
+    .upgrade-btn-area {
+        .cmn-btn2{
+            text-transform: none;
+            i {
+                color: var(--primary-color);
+                margin-right: 5px;
+            }
+        }
+    }
+} 
 .sidebar-nav li {
     padding: 0;
     margin: 0;
@@ -2212,7 +2265,16 @@ hr.divider:after {
 
 .sidebar-nav .nav-link .bi-chevron-down {
     margin-right: 0;
-    transition: transform 0.2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-color-opacity-low2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 5px;
+    color: var(--body-color);
 }
 
 .sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
@@ -2257,6 +2319,8 @@ hr.divider:after {
 }
 
 .rtl .sidebar-nav {
+    padding-left: 5px;
+    padding-right: 0;
     .nav-link i {
         margin-right: 0;
         margin-left: 10px;
@@ -2277,7 +2341,7 @@ hr.divider:after {
     }
 }
 
-.rtl .sidebar-nav .upgrade-btn-area .cmn-btn2 i {
+.rtl .sidebar .upgrade-btn-area .cmn-btn2 i {
     margin-right: 0;
     margin-left: 5px;
 }
@@ -2690,24 +2754,31 @@ hr.divider:after {
         text-transform: capitalize;
     }
 
-    .input-box {
-        position: relative;
-        display: flex;
-        align-items: center;
+}
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
 
-        .single-btn {
-            position: absolute;
-            height: 35px;
-            width: 35px;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-            right: 3px;
-            color: var(--white);
+    .single-btn {
+        position: absolute;
+        height: 35px;
+        width: 35px;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        right: 3px;
+        color: var(--white);
 
-        }
     }
 }
-
+.rtl{
+    .input-box{
+        .single-btn{
+            left: 3px;
+            right: auto;
+        }
+    }
+} 
 .template-create-page {
     padding: 20px 0;
 }
@@ -2804,7 +2875,7 @@ hr.divider:after {
 }
 
 // User panel topics blog rtl start
-.rtl .section-left-card .template-view .templete-title-area .template-icon-area .item:first-child i {
+.rtl .template-view .templete-title-area .template-icon-area .item:first-child i {
     margin-right: 0;
     margin-left: 10px;
 }
