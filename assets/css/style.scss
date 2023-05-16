@@ -18,6 +18,7 @@
     --bg-color1: #F9FEFF;
     --bg-color2: #F8FCFB;
     --bg-color3: #0a1c3a;
+    --bg-color4: #fff2d6;
     --body-color: #707070;
     --border-color1: #f2f2f2;
     --border-color2: #DCD8E8;
@@ -196,7 +197,7 @@ textarea.form-control {
 }
 
 .form-select {
-    background-image: url(../images/shipment_calculator/downward-arrow.png);
+    background-image: url(../images/accordion/arrow-down.png);
     background-repeat: no-repeat;
 }
 
@@ -673,35 +674,42 @@ body::-webkit-scrollbar-thumb {
         color: var(--white);
     }
 }
+
 // --------------------------------------------------------
 //  Alerts section start 
 // --------------------------------------------------------
-.alert{
+.alert {
     display: flex;
     align-items: center;
     padding: 10px 15px;
     border-radius: 15px;
     border-left: 15px solid;
     box-shadow: 0px 3px 3px #BABABA;
-    .icon-area{
-        i{
+
+    .icon-area {
+        i {
             font-size: 30px;
             margin-right: 15px;
         }
     }
-    .title{
+
+    .title {
         font-size: 16px;
         text-transform: capitalize;
         font-weight: 600;
     }
-    .title{
+
+    .title {
         font-size: 18px;
     }
-    .title, .description{
+
+    .title,
+    .description {
         color: var(--heading-color);
     }
 }
-.alert-dismissible{
+
+.alert-dismissible {
     .btn-close {
         position: absolute;
         top: 50%;
@@ -712,38 +720,46 @@ body::-webkit-scrollbar-thumb {
         background: none;
         height: initial;
         width: initial;
-        i{
+
+        i {
             font-size: 24px;
         }
     }
-} 
-.alert-success{
+}
+
+.alert-success {
     color: #3AC279;
     background: #C5F7DC;
     border-color: #C5F7DC;
     border-left-color: #3ac279;
-    .btn-close{
+
+    .btn-close {
         color: #3AC279;
     }
 }
-.alert-danger{
+
+.alert-danger {
     color: #E9594C;
     background: #FFCFCB;
     border-color: #FFCFCB;
     border-left-color: #E9594C;
-    .btn-close{
+
+    .btn-close {
         color: #E9594C;
     }
 }
-.alert-warning{
+
+.alert-warning {
     color: #E89F29;
     background: #FFE8C3;
     border-color: #FFE8C3;
     border-left-color: #E89F29;
-    .btn-close{
+
+    .btn-close {
         color: #E89F29;
     }
 }
+
 // --------------------------------------------------------
 //  Alerts section end
 // --------------------------------------------------------
@@ -1651,8 +1667,8 @@ hr.divider:after {
 }
 
 .pricing-box {
-    border-radius: 8px;
-    background: var(--primary-color-opacity-low);
+    border-radius: 10px;
+    background: var(--white);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
     ;
 
@@ -1709,8 +1725,8 @@ hr.divider:after {
     }
 
     .btn-area {
-        margin-top: 32px;
         display: flex;
+        align-items: center;
         justify-content: center;
     }
 }
@@ -1737,19 +1753,40 @@ hr.divider:after {
 }
 
 .prepaid-plan {
-    .prepaid-title {
+    .section-body {
         display: flex;
         justify-content: space-between;
-        font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 20px;
+        padding: initial;
+    }
 
-        sup {
-            font-size: 16px;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: var(--grayish-blue);
+    .price-area {
+        padding: 15px;
+        background-color: var(--black);
+        border-radius: 10px;
+        color: var(--white);
+
+        .price-title {
+            font-size: 46px;
+            font-family: var(--heading-font);
+            font-weight: 700;
         }
+    }
+
+    .content-details {
+        padding: 15px;
+    }
+
+    .prepaid-title {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: var(--heading-font);
+    }
+
+    sup {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: var(--grayish-blue);
     }
 
     .prepaid-info {
@@ -1762,10 +1799,7 @@ hr.divider:after {
     }
 
     .btn-area {
-        .cmn-btn2 {
-            width: initial !important;
-            border-radius: 30px;
-        }
+        padding: 15px;
     }
 }
 
@@ -1778,6 +1812,30 @@ hr.divider:after {
             sup {
                 font-size: 10px;
             }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .prepaid-plan {
+        .price-area {
+            .price-title {
+                font-size: 28px;
+            }
+        }
+
+        sup {
+            font-size: 10px;
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .prepaid-plan {
+        .section-body {
+            flex-direction: column;
+            text-align: center;
         }
     }
 }
@@ -2446,7 +2504,7 @@ hr.divider:after {
 }
 
 // Footer responsive start
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .footer-area {
         padding-bottom: 90px;
     }
@@ -2530,6 +2588,18 @@ hr.divider:after {
     }
 }
 
+// Responsive banner start
+@media (max-width: 991px) {
+    .banner-area {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        h3{
+            font-size: 36px;
+        }
+    }
+}
+
+// Responsive banner end
 // ---------------------------------------------------- 
 // Banner section end
 // ----------------------------------------------------
@@ -2636,6 +2706,14 @@ hr.divider:after {
         .form-control {
             height: 45px;
             background: transparent;
+            border: 1px solid var(--border-color2);
+
+            &:focus {
+                border-color: var(--primary-color);
+            }
+        }
+        .form-select{
+            height: 45px;
             border: 1px solid var(--border-color2);
 
             &:focus {

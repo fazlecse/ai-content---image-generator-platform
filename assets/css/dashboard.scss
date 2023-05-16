@@ -21,7 +21,8 @@
     --orange: #ffab00;
     --bg-color1: #F9FEFF;
     --bg-color2: #F8FCFB;
-    --bg-color3: #fff2d6;
+    --bg-color3: #160647;
+    --bg-color4: #fff2d6;
     --body-color: #707070;
     --border-color1: #f2f2f2;
     --border-color2: #e1e1e1;
@@ -490,7 +491,7 @@ figure {
 :hover::-webkit-scrollbar-thumb {
     visibility: visible;
     opacity: 1;
-    
+
 }
 
 body::-webkit-scrollbar {
@@ -608,6 +609,7 @@ body::-webkit-scrollbar-thumb {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 // --------------------------------------------------------
 // Cmn btn start
 // --------------------------------------------------------
@@ -624,7 +626,8 @@ body::-webkit-scrollbar-thumb {
     font-weight: 500;
     text-transform: capitalize;
     border: 1px solid var(--primary-color);
-    i{
+
+    i {
         margin-left: 10px;
         background-color: var(--white);
         width: 20px;
@@ -642,16 +645,18 @@ body::-webkit-scrollbar-thumb {
         background: var(--btn-bg2);
     }
 }
+
 // Rtl cmn btn start
-.rtl{
-    .cmn-btn{
-        i{
+.rtl {
+    .cmn-btn {
+        i {
             margin-left: 0;
             margin-right: 10px;
             transform: rotate(180deg);
         }
     }
 }
+
 // Rtl cmn btn end
 // --------------------------------------------------------
 // Cmn btn end
@@ -1156,12 +1161,6 @@ hr.divider:after {
     }
 }
 
-@media (max-width: 575px) {
-
-    .table-responsive .table tbody tr td {
-        padding: 10px 0;
-    }
-}
 
 // --------------------------------------------------------
 // -- Responsive table section end --
@@ -1693,9 +1692,7 @@ hr.divider:after {
 
 // Main responsive start
 @media (max-width: 1199px) {
-    #main {
-        
-    }
+    #main {}
 }
 
 @media (max-width: 991px) {
@@ -1705,9 +1702,10 @@ hr.divider:after {
         }
     }
 }
+
 @media (max-width: 575px) {
     #main {
-        padding: 10px;
+        padding: 15px 10px;
     }
 }
 
@@ -2111,7 +2109,6 @@ hr.divider:after {
     z-index: 996;
     transition: all 0.3s;
     padding: 20px;
-    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #aab7cf transparent;
     box-shadow: var(--shadow3);
@@ -2167,9 +2164,12 @@ hr.divider:after {
     overflow-y: auto;
     height: 550px;
     padding-right: 5px;
+    height: 100%;
+    padding-bottom: 235px;
 }
-.sidebar{
-    .progress-area{
+
+.sidebar {
+    .progress-area {
         margin-bottom: 20px;
         background-color: var(--bg-color1);
         padding: 15px;
@@ -2177,16 +2177,18 @@ hr.divider:after {
         border-radius: 10px;
         border: 1px solid var(--border-color3);
         text-align: center;
-        .progress-header{
-            .title{
+
+        .progress-header {
+            .title {
                 margin-top: 10px;
             }
         }
-        .icon-box{
+
+        .icon-box {
             width: 50px;
             height: 50px;
             border-radius: 8px;
-            background-color: var(--bg-color3);
+            background-color: var(--bg-color4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2194,22 +2196,26 @@ hr.divider:after {
             margin: 0 auto;
             font-size: 22px;
         }
-        .content-area{
+
+        .content-area {
             display: flex;
             justify-content: space-around;
             margin: 15px 0;
         }
     }
+
     .upgrade-btn-area {
-        .cmn-btn2{
+        .cmn-btn2 {
             text-transform: none;
+
             i {
                 color: var(--primary-color);
                 margin-right: 5px;
             }
         }
     }
-} 
+}
+
 .sidebar-nav li {
     padding: 0;
     margin: 0;
@@ -2313,6 +2319,15 @@ hr.divider:after {
     background-color: #4154f1;
 }
 
+// responsive sidebar start
+@media (max-width: 991px) {
+    .sidebar-nav {
+        padding-bottom: 295px;
+    }
+}
+
+// responsive sidebar end
+
 // Sidebar rtl start
 .rtl .sidebar {
     right: 0;
@@ -2321,6 +2336,7 @@ hr.divider:after {
 .rtl .sidebar-nav {
     padding-left: 5px;
     padding-right: 0;
+
     .nav-link i {
         margin-right: 0;
         margin-left: 10px;
@@ -2755,6 +2771,7 @@ hr.divider:after {
     }
 
 }
+
 .input-box {
     position: relative;
     display: flex;
@@ -2771,14 +2788,16 @@ hr.divider:after {
 
     }
 }
-.rtl{
-    .input-box{
-        .single-btn{
+
+.rtl {
+    .input-box {
+        .single-btn {
             left: 3px;
             right: auto;
         }
     }
-} 
+}
+
 .template-create-page {
     padding: 20px 0;
 }
@@ -2791,6 +2810,7 @@ hr.divider:after {
         justify-content: center;
     }
 }
+
 .template-view {
     .templete-title-area {
         font-weight: 600;
@@ -2888,7 +2908,7 @@ hr.divider:after {
 
 
 // ----------------------------------------------------
-// All images section start
+// Cmn table section start
 // ----------------------------------------------------
 .cmn-table-card {
     .search-bar {
@@ -2919,6 +2939,16 @@ hr.divider:after {
         }
     }
 }
+// Responsive cmn table card start
+@media (max-width: 767px){
+    .cmn-table-card{
+        .card-body{
+            padding: 0;
+        }
+    }
+    
+}
+// Responsive cmn table card end
 
 .data-table-length {
     .form-select {
@@ -2974,23 +3004,37 @@ hr.divider:after {
             border-radius: 5px;
         }
     }
+    .table-striped>tbody>tr:nth-of-type(odd)>*{
+        --bs-table-accent-bg: transparent;
+    }
 }
 
-// Ai image responsive start
+//responsive table start
 @media (max-width: 991px) {
     .cmn-btn {
         font-size: 16px;
     }
 
-    .cmn-table .table-img {
-        width: 35px;
-        height: 35px;
-        min-width: 35px;
+    .cmn-table {
+        .table-img {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+        }
+
+        .text-bold {
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .cmn-table {
+        .table-striped>tbody>tr:nth-of-type(odd)>* {
+            --bs-table-accent-bg: var(--bg-color2);
+        }
     }
 
-    .cmn-table .text-bold {
-        font-weight: 500;
-    }
 }
 
 @media (max-width: 575px) {
@@ -2999,7 +3043,7 @@ hr.divider:after {
     }
 }
 
-// Ai image responsive end
+//Responsive table end
 
 // Ai image rtl start
 .rtl .cmn-table-card .search-bar {
@@ -3074,8 +3118,8 @@ hr.divider:after {
 }
 
 .pricing-box {
-    border-radius: 8px;
-    background: var(--primary-color-opacity-low);
+    border-radius: 10px;
+    background: var(--white);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
     ;
 
@@ -3132,8 +3176,8 @@ hr.divider:after {
     }
 
     .btn-area {
-        margin-top: 32px;
         display: flex;
+        align-items: center;
         justify-content: center;
     }
 }
@@ -3160,19 +3204,40 @@ hr.divider:after {
 }
 
 .prepaid-plan {
-    .prepaid-title {
+    .section-body {
         display: flex;
         justify-content: space-between;
-        font-size: 32px;
-        font-weight: 600;
-        margin-bottom: 20px;
+        padding: initial;
+    }
 
-        sup {
-            font-size: 16px;
-            text-transform: uppercase;
-            font-weight: 800;
-            color: var(--grayish-blue);
+    .price-area {
+        padding: 15px;
+        background-color: var(--black);
+        border-radius: 10px;
+        color: var(--white);
+
+        .price-title {
+            font-size: 46px;
+            font-family: var(--heading-font);
+            font-weight: 700;
         }
+    }
+
+    .content-details {
+        padding: 15px;
+    }
+
+    .prepaid-title {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: var(--heading-font);
+    }
+
+    sup {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: var(--grayish-blue);
     }
 
     .prepaid-info {
@@ -3185,10 +3250,7 @@ hr.divider:after {
     }
 
     .btn-area {
-        .cmn-btn2 {
-            width: initial !important;
-            border-radius: 30px;
-        }
+        padding: 15px;
     }
 }
 
@@ -3205,13 +3267,28 @@ hr.divider:after {
     }
 }
 
-@media (max-width: 575px) {
-    .pricing {
-        .card-body {
-            padding: 0;
+@media (max-width: 991px) {
+    .prepaid-plan {
+        .price-area {
+            .price-title {
+                font-size: 28px;
+            }
+        }
+
+        sup {
+            font-size: 10px;
+        }
+
+    }
+}
+
+@media (max-width: 480px) {
+    .prepaid-plan {
+        .section-body {
+            flex-direction: column;
+            text-align: center;
         }
     }
-
 }
 
 @media (max-width: 400px) {
@@ -3232,6 +3309,7 @@ hr.divider:after {
 }
 
 // Pricing responsive end
+
 // Pricing rtl start
 .rtl .pricing-box {
     .section-header {
@@ -3250,9 +3328,6 @@ hr.divider:after {
 // Pricing rtl end
 // ----------------------------------------------------
 // Pricing section end
-// ----------------------------------------------------
-// ----------------------------------------------------
-// Pricing section start
 // ----------------------------------------------------
 .account-settings-navbar {
     margin-bottom: 15px;
@@ -3444,9 +3519,10 @@ hr.divider:after {
         padding-bottom: 80px;
     }
 }
+
 @media (max-width: 575px) {
     .footer {
-        display: initial;
+        flex-direction: column;
     }
 }
 
