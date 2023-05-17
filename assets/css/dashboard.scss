@@ -2939,15 +2939,17 @@ hr.divider:after {
         }
     }
 }
+
 // Responsive cmn table card start
-@media (max-width: 767px){
-    .cmn-table-card{
-        .card-body{
+@media (max-width: 767px) {
+    .cmn-table-card {
+        .card-body {
             padding: 0;
         }
     }
-    
+
 }
+
 // Responsive cmn table card end
 
 .data-table-length {
@@ -3004,7 +3006,8 @@ hr.divider:after {
             border-radius: 5px;
         }
     }
-    .table-striped>tbody>tr:nth-of-type(odd)>*{
+
+    .table-striped>tbody>tr:nth-of-type(odd)>* {
         --bs-table-accent-bg: transparent;
     }
 }
@@ -3213,11 +3216,16 @@ hr.divider:after {
     .price-area {
         padding: 15px;
         background-color: var(--black);
-        border-radius: 10px;
         color: var(--white);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         .price-title {
-            font-size: 46px;
+            font-size: 40px;
             font-family: var(--heading-font);
             font-weight: 700;
         }
@@ -3228,13 +3236,13 @@ hr.divider:after {
     }
 
     .prepaid-title {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 600;
         font-family: var(--heading-font);
     }
 
     sup {
-        font-size: 18px;
+        font-size: 22px;
         text-transform: uppercase;
         font-weight: 800;
         color: var(--grayish-blue);
@@ -3276,7 +3284,7 @@ hr.divider:after {
         }
 
         sup {
-            font-size: 10px;
+            font-size: 18px;
         }
 
     }
@@ -3287,6 +3295,10 @@ hr.divider:after {
         .section-body {
             flex-direction: column;
             text-align: center;
+            .price-area{
+                width: 100%;
+                border-radius: 10px;
+            }
         }
     }
 }
