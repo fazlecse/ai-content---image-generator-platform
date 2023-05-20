@@ -1691,9 +1691,6 @@ hr.divider:after {
 }
 
 // Main responsive start
-@media (max-width: 1199px) {
-    #main {}
-}
 
 @media (max-width: 991px) {
     #main {
@@ -3541,4 +3538,64 @@ hr.divider:after {
 // Footer responsive end
 // ----------------------------------------------------
 // Footer it works section start
+// ----------------------------------------------------
+
+// ----------------------------------------------------
+// Pagination section start
+// ----------------------------------------------------
+.pagination-section {
+    .page-link {
+        &:focus {
+            background-color: var(--primary-color);
+            color: var(--white);
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    ul {
+        li {
+            a {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px !important;
+                color: var(--heading-color);
+                background-color: var(--white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 10px;
+                border: 1px solid var(--primary-color);
+                box-shadow: none;
+
+                &:hover {
+                    background-color: var(--primary-color);
+                    color: var(--white) !important;
+                    border: 1px solid var(--primary-color);
+                }
+            }
+
+            i {
+                display: flex;
+            }
+        }
+
+        .active {
+            a {
+                background-color: var(--primary-color);
+                color: var(--white);
+                border-color: var(--primary-color);
+            }
+        }
+    }
+}
+
+// Pagination rtl start
+.rtl .pagination-section ul li i {
+    transform: rotate(180deg);
+}
+
+// Pagination rtl end
+// ----------------------------------------------------
+// Pagination section end
 // ----------------------------------------------------
