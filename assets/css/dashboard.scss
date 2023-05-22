@@ -1161,11 +1161,23 @@ hr.divider:after {
     }
 }
 
+// Feature-rich Photo Viewer start
+.photoviewer-modal {
+    background-color: var(--white);
+    border: 1px solid var(--border-color3);
+    box-shadow: var(--shadow3);
+    .photoviewer-stage{
+        border-top: 1px solid var(--border-color3);
+        border-bottom: 1px solid var(--border-color3);
+    }
+}
+
+// Feature-rich Photo Viewer end
+
 
 // --------------------------------------------------------
 // -- Responsive table section end --
 // --------------------------------------------------------
-
 /* reusable_style_end */
 
 /* margin_top */
@@ -3292,7 +3304,8 @@ hr.divider:after {
         .section-body {
             flex-direction: column;
             text-align: center;
-            .price-area{
+
+            .price-area {
                 width: 100%;
                 border-radius: 10px;
             }

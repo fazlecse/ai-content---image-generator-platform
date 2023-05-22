@@ -322,6 +322,62 @@ $(document).ready(function () {
 
 
 });
+
+// Feature-rich Photo Viewer start
+$('[data-gallery=photoviewer]').click(function (e) {
+
+    e.preventDefault();
+
+    var items = [],
+        options = {
+            index: $(this).index(),
+            headerToolbar: [
+                'minimize',
+                'maximize',
+                'close'
+            ],
+            footerToolbar: [
+                'prev',
+                'next',
+                'zoomIn',
+                'zoomOut',
+                'fullscreen',
+                'actualSize',
+                'rotateLeft',
+                'rotateRight',
+                'myCustomButton',
+            ],
+            customButtons: {
+                myCustomButton: {
+                    text: '<i class="fa-light fa-cloud-arrow-down"></i>',
+                    title: 'Download Image!',
+                    click: function (context, e) {
+                        alert('clicked the custom button!');
+                    }
+                }
+            },
+            modalWidth: 400,
+            modalHeight: 400,
+            callbacks: {
+                beforeChange: function (context, index) {
+                    console.log(context, index)
+                },
+                changed: function (context, index) {
+                    console.log(context, index)
+                }
+            }
+        };
+
+    items.push({
+        src: $(this).attr('href'),
+        title: $(this).attr('data-title')
+    });
+
+    new PhotoViewer(items, options);
+
+});
+
+
 // RichTextEditor start
 var editor1cfg = {}
 editor1cfg.toolbar = "basic";

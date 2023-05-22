@@ -1012,6 +1012,16 @@ hr.divider:after {
     --bs-table-accent-bg: var(--bgDark) !important;
   }
 }
+.photoviewer-modal {
+  background-color: var(--white);
+  border: 1px solid var(--border-color3);
+  box-shadow: var(--shadow3);
+}
+.photoviewer-modal .photoviewer-stage {
+  border-top: 1px solid var(--border-color3);
+  border-bottom: 1px solid var(--border-color3);
+}
+
 /* reusable_style_end */
 /* margin_top */
 .mt-10 {
