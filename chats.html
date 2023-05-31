@@ -20,10 +20,6 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- select2 Css link -->
     <link rel="stylesheet" href="assets/css/select2.min.css">
-    <!-- richeditor Css link -->
-    <link rel="stylesheet" href="assets/css/rte_theme_default.css">
-    <script src="assets/js/rte.js"></script>
-    <script src="assets/js/all_plugins.js"></script>
 
 
 
@@ -452,188 +448,158 @@
     <!-------------------------------------------------------->
 
     <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h3>AI chats</h3>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">AI chats</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <!-- cmn card start -->
         <div class="section dashboard">
-            <div class="template-create-page">
-                <form action="">
-                    <div class="row g-4">
-                        <div class="col-lg-4">
-                            <div class="section-left-card">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="template-view">
-                                            <div class="templete-title-area">
-                                                <div class="template-icon-area">
-                                                    <div class="item item1">
-                                                        <i class="fa-regular fa-message-code"></i> <span
-                                                            class="template-title">AI Code Generate</span>
-                                                    </div>
-                                                    <div class="btn-area d-lg-none">
-                                                        <button type="button" class="cmn-btn" data-bs-toggle="modal"
-                                                            data-bs-target="#image-generator-modal">Filter<i
-                                                                class="fa-regular fa-filter"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="col-12 d-none d-lg-block">
-                                            <div class="row g-3">
-                                                <div class="col-12">
-                                                    <div class="notification">
-                                                        Use this code generator to create code in any programming
-                                                        language.
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="Title" class="form-label">Title<span
-                                                            class="highlight">*</span></label>
-                                                    <input class="form-control" id="Title" value="Title here">
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Language</label>
-                                                    <select class="js-example-basic-single" name="state">
-                                                        <option value="ae">English (USA)</option>
-                                                        <option value="cn">Bulgarian (Bulgaria)</option>
-                                                        <option value="es"> Chinese (Mandarin)</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="exampleFormControlTextarea1" class="form-label">Example
-                                                        textarea</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                        placeholder="e.g. Describe your blog post" rows="3"></textarea>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card favorite-template overflow-auto">
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i
+                                    class="fa-regular fa-ellipsis"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Filter</h6>
+                                </li>
 
-                                                </div>
-                                                <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Quality type</label>
-                                                    <select class="cmn-select2-dropdown" name="state">
-                                                        <option value="AL">Low</option>
-                                                        <option value="WY">Average</option>
-                                                        <option value="WY">High</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label for="inputAddress" class="form-label">Number of
-                                                        Results</label>
-                                                    <select class="cmn-select2-dropdown" name="state">
-                                                        <option value="AL">1</option>
-                                                        <option value="WY">2</option>
-                                                        <option value="WY">3</option>
-                                                        <option value="WY">4</option>
-                                                        <option value="WY">5</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label for="inputCity" class="form-label">Max Result Length</label>
-                                                    <input type="text" class="form-control" id="inputCity" value="200"
-                                                        onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="btn-area">
-                                                        <button type="submit" class="cmn-btn">generate text <i
-                                                                class="fa-regular fa-angle-right"></i></button>
-                                                    </div>
-                                                </div>
+                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-header border-0">
+                            <h5 class="card-title"><i class="fa-regular fa-microchip-ai"></i>Ai chats</h5>
+                            <p>Need to create a content? We got you covered! Checkout the list of topics that
+                                you can use
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <!-- ai chats start -->
+                            <div class="row g-4">
+                                <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                                    <div class="chat-template active">
+                                        <a href="#chats.html" class="template-link"></a>
+                                        <div class="icon-area"><a href=""><i class="star fa-regular fa-star"></i></a>
+                                        </div>
+                                        <div class="profile-details">
+                                            <div class="thumbs-area">
+                                                <img src="assets/images/Person/1.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <div class="title">alen donald</div>
+                                                <p>Monivation speeker</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="section-right-card">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="row g-4">
-                                            <div class="col-sm-6">
-                                                <div class="template-view">
-                                                    <div class="templete-title-area">
-                                                        <div class="template-icon-area">
-                                                            <div class="item item1">
-                                                                <i class="fa-regular fa-ballot-check"></i> <span
-                                                                    class="template-title">Generated Result</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="cmn-btn-group d-flex justify-content-sm-end ">
-                                                    <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" data-bs-title="Export as Word Document"
-                                                        class="single-btn"><i
-                                                            class="fa-sharp fa-regular fa-file-word"></i></button>
-
-                                                    <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" data-bs-title="Export as PDF Document"
-                                                        class="single-btn"><i
-                                                            class="fa-regular fa-file-pdf"></i></button>
-
-                                                    <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" data-bs-title="Export as Text Document"
-                                                        class="single-btn"><i
-                                                            class="fa-sharp fa-regular fa-file-invoice"></i></button>
-
-                                                    <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" data-bs-title="Copy Text"
-                                                        class="single-btn"><i class="fa-regular fa-copy"></i></button>
-
-                                                    <button type="button" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top" data-bs-title="Save Document"
-                                                        class="single-btn"><i
-                                                            class="fa-regular fa-print active"></i></button>
-                                                </div>
-                                            </div>
-
+                                <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                                    <div class="chat-template">
+                                        <a href="#chats.html" class="template-link"></a>
+                                        <div class="icon-area"><a href=""><i class="star fa-regular fa-star"></i></a>
                                         </div>
-
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="card-body-top">
-                                            <div class="row g-4">
-                                                <div class="col-sm-6">
-                                                    <select class="cmn-select2-dropdown" name="state">
-                                                        <option value="AL">Select Workbook Name</option>
-                                                        <option value="WY"> DADA</option>
-                                                        <option value="WY">TRST</option>
-                                                        <option value="WY">Aaaa</option>
-                                                        <option value="WY">Forla</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="input-box">
-                                                        <input type="text" class="form-control" id="inputCity"
-                                                            value="New Code">
-                                                        <button type="button" class="single-btn"
-                                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                                            data-bs-title="Save Document"><i
-                                                                class="fa-regular fa-floppy-disk"></i></button>
-                                                    </div>
-                                                </div>
+                                        <div class="profile-details">
+                                            <div class="thumbs-area">
+                                                <img src="assets/images/Person/2.jpg" alt="">
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="rich-text-editor">
-                                                <div id="div_editor1">
-                                                    <p>Hello world!</p>
-                                                    <!-- <p><img src='/images/editor-image.png' /></p> -->
-                                                </div>
+                                            <div class="content-area">
+                                                <div class="title">alen donald</div>
+                                                <p>Monivation speeker</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                                    <div class="chat-template active">
+                                        <a href="#chats.html" class="template-link"></a>
+                                        <div class="icon-area"><a href=""><i class="star fa-regular fa-star"></i></a>
+                                        </div>
+                                        <div class="profile-details">
+                                            <div class="thumbs-area">
+                                                <img src="assets/images/Person/1.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <div class="title">alen donald</div>
+                                                <p>Monivation speeker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                                    <div class="chat-template">
+                                        <a href="#chats.html" class="template-link"></a>
+                                        <div class="icon-area"><a href=""><i class="star fa-regular fa-star"></i></a>
+                                        </div>
+                                        <div class="profile-details">
+                                            <div class="thumbs-area">
+                                                <img src="assets/images/Person/2.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <div class="title">alen donald</div>
+                                                <p>Monivation speeker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                                    <div class="chat-template active">
+                                        <a href="#chats.html" class="template-link"></a>
+                                        <div class="icon-area"><a href=""><i class="star fa-regular fa-star"></i></a>
+                                        </div>
+                                        <div class="profile-details">
+                                            <div class="thumbs-area">
+                                                <img src="assets/images/Person/1.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <div class="title">alen donald</div>
+                                                <p>Monivation speeker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6">
+                                    <div class="chat-template">
+                                        <a href="#chats.html" class="template-link"></a>
+                                        <div class="icon-area"><a href=""><i class="star fa-regular fa-star"></i></a>
+                                        </div>
+                                        <div class="profile-details">
+                                            <div class="thumbs-area">
+                                                <img src="assets/images/Person/2.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <div class="title">alen donald</div>
+                                                <p>Monivation speeker</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+                            <!-- ai chats end -->
                         </div>
+
                     </div>
-                </form>
+                </div>
             </div>
-
         </div>
-        </div>
+        <!-- cmn card start -->
 
     </main><!-- End #main -->
+
+
+
+
+
+
 
     <!-------------------------------------------------------->
     <!-- Footer section start -->
@@ -658,107 +624,6 @@
 
 
 
-    <!-- Modal section start -->
-
-    <!-- Image generate modal start-->
-    <div class="modal fade image-generator-modal" id="image-generator-modal" data-bs-backdrop="static" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="template-view">
-                        <div class="templete-title-area">
-                            <div class="template-icon-area">
-                                <div class="item item1">
-                                    <i class="fa-regular fa-image"></i> <span class="template-title">AI Image
-                                        Generator</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="formModal">
-
-                    <div class="col-12">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="notification">
-                                    Use this code generator to create code in any programming
-                                    language.
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="Title" class="form-label">Title<span class="highlight">*</span></label>
-                                <input class="form-control" id="Title" value="Title here">
-                            </div>
-                            <div class="col-12">
-                                <label for="inputAddress" class="form-label">Language</label>
-                                <select class="modal-select" name="state">
-                                    <option value="ae">English (USA)</option>
-                                    <option value="cn">Bulgarian (Bulgaria)</option>
-                                    <option value="es"> Chinese (Mandarin)</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label for="exampleFormControlTextarea1" class="form-label">Example
-                                    textarea</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                    placeholder="e.g. Describe your blog post" rows="3"></textarea>
-
-                            </div>
-                            <div class="col-12">
-                                <label for="inputAddress" class="form-label">Quality type</label>
-                                <select class="modal-select" name="state">
-                                    <option value="AL">Low</option>
-                                    <option value="WY">Average</option>
-                                    <option value="WY">High</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <label for="inputAddress" class="form-label">Number of
-                                    Results</label>
-                                <select class="modal-select" name="state">
-                                    <option value="AL">1</option>
-                                    <option value="WY">2</option>
-                                    <option value="WY">3</option>
-                                    <option value="WY">4</option>
-                                    <option value="WY">5</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <label for="inputCity" class="form-label">Max Result Length</label>
-                                <input type="text" class="form-control" id="inputCity" value="200"
-                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                            </div>
-                            <div class="col-12">
-                                <div class="generate-btn-area">
-                                    <button type="submit" class="cmn-btn">generate image <i
-                                            class="fa-regular fa-angle-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Image generate modal end-->
-
-
-
-    <!-- Modal section end -->
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -767,10 +632,6 @@
 
     <!-- Bootstrap Js link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/select2.min.js"></script>
-    <!-- Richeditor Js link -->
-    <script src="assets/js/richeditor.js"></script>
 
 
     <!-- Main Js slink -->
